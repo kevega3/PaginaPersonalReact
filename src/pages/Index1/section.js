@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
 //Importing Modal
-import ModalSection from "../../components/common/ModalSection";
+// import ModalSection from "../../components/common/ModalSection";
 
 class Section extends Component {
   constructor() {
@@ -29,16 +29,15 @@ class Section extends Component {
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
               >
-                <h4 className="home-small-title">Awesome Design</h4>
+                <h4 className="home-small-title">Kevin's Vega Quiroga</h4>
                 <h1 className="home-title">
-                  We love make things amazing and simple
+                Desarrollador de Software
                 </h1>
                 <p className="pt-3 home-desc mx-auto">
-                  Maecenas class semper class semper sollicitudin lectus lorem
-                  iaculis imperdiet aliquam vehicula tempor auctor curabitur
-                  pede aenean ornare.
+                Con vasta experiencia en el desarrollo de software, me especializo en crear productos y soluciones tecnológicas que aporten valor y eficiencia a cada proyecto. Mi pasión es construir aplicaciones que sean tanto innovadoras como fáciles de usar, asegurándome de que cada detalle esté alineado con las necesidades del usuario.
                 </p>
-                <p className="play-shadow mt-4">
+                {/* este es el boton del video introducctorio  */}
+                {/* <p className="play-shadow mt-4">
                   <Link
                     onClick={this.callModal}
                     to="/#"
@@ -46,10 +45,12 @@ class Section extends Component {
                   >
                     <i className="mdi mdi-play text-center"></i>
                   </Link>
-                </p>
+                </p> */}
               </Col>
-              {/* Render ModalSection Component for Modal */}
-              <ModalSection ref="child" channel="vimeo" videoId="99025203" />
+
+            {/* Este es el modal para el video */}
+              {/* <ModalSection ref="child" channel="vimeo" videoId="99025203" /> */} 
+
             </Row>
           </Container>
         </section>

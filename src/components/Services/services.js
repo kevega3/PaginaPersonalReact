@@ -11,60 +11,61 @@ class Services extends Component {
   state = {
     services: [
       {
-        title: "Digital Design",
-        icon: "pe-7s-diamond",
-        description:
-          "Some quick example text to build on the card title and make up the bulk of the card's content. Moltin gives platform.",
-      },
-      {
-        title: "Unlimited Colors",
-        icon: "pe-7s-display2",
-        description:
-          "Credibly brand standards compliant users without extensible services. Anibh euismod tincidunt laoreet Ipsum passage.",
-      },
-      {
-        title: "Strategy Solutions",
-        icon: "pe-7s-piggy",
-        description:
-          "Separated they live in Bookmarksgrove right at the coast of the Semantics, and large language ocean neary regelia.",
-      },
-      {
-        title: "Awesome Support",
+        title: "React.js",
         icon: "pe-7s-science",
         description:
-          "It is a paradisematic country, in which roasted parts of sentences fly into your mouth leave for the far World.",
+          "Utilizo React.js para desarrollar interfaces de usuario interactivas y dinámicas en el front-end, generando aplicaciones de alta disponibilidad que consumen APIs para su funcionalidad.",
       },
       {
-        title: "Truly Multipurpose",
-        icon: "pe-7s-news-paper",
+        title: "Node.js",
+        icon: "mdi mdi-nodejs",
         description:
-          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.",
+          "Con Node.js, desarrollo aplicaciones del lado del servidor que manejan múltiples conexiones de manera eficiente, utilizando JavaScript para la creación de APIs RESTful y la gestión de la lógica de negocio.",
       },
       {
-        title: "Easy to customize",
-        icon: "pe-7s-plane",
+        title: "Node-RED",
+        icon: "pe-7s-rocket",
         description:
-          "Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.",
+          "Uso Node-RED para la integración de servicios y la automatización de flujos de trabajo, permitiendo la conexión entre dispositivos IoT y APIs de una manera visual y fácil de manejar.",
       },
       {
-        title: "Pixel Perfect Design",
-        icon: "pe-7s-arc",
+        title: "PHP",
+        icon: "pe-7s-hammer",
         description:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.",
+          "Empleo PHP para el desarrollo de aplicaciones web del lado del servidor, creando soluciones robustas y eficientes para la gestión de contenido y la interacción con bases de datos.",
       },
       {
-        title: "Perfect Toolbox",
-        icon: "pe-7s-tools",
+        title: "SQL",
+        icon: "pe-7s-server",
         description:
-          "Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.",
+          "Utilizo SQL para la gestión y manipulación de bases de datos relacionales, asegurando la integridad de los datos y optimizando las consultas para un rendimiento óptimo.",
       },
       {
-        title: "Awesome Design",
-        icon: "pe-7s-timer",
+        title: "Git | GitHub",
+        icon: "mdi mdi-github",
         description:
-          "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+          "Git y GitHub son mis herramientas esenciales para el control de versiones y la colaboración en proyectos, permitiéndome llevar un seguimiento eficaz de los cambios y trabajar en equipo de manera organizada.",
+      },
+      {
+        title: "MongoDB",
+        icon: "pe-7s-leaf",
+        description:
+          "Uso MongoDB como una solución de base de datos NoSQL para el almacenamiento y la gestión de datos en formato JSON, ideal para aplicaciones que requieren escalabilidad y flexibilidad en la estructura de datos.",
+      },
+      {
+        title: "Linux",
+        icon: "pe-7s-config",
+        description:
+          "Trabajo en entornos Linux para la administración de servidores y la implementación de aplicaciones, aprovechando su robustez y seguridad para la ejecución de servicios críticos.",
+      },
+      {
+        title: "JavaScript",
+        icon: "pe-7s-light",
+        description:
+          "JavaScript es el lenguaje principal que utilizo para desarrollar tanto el front-end como el back-end de mis aplicaciones, permitiéndome crear interactividad y lógica del lado del cliente y del servidor.",
       },
     ],
+    
   };
   render() {
     return (
@@ -73,8 +74,8 @@ class Services extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Our Services"
-              description="We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients."
+              title="Mis Habilidades"
+              description="Cuento con sólidas habilidades en el desarrollo de software y su mantenimiento, y siempre estoy en la búsqueda de adquirir nuevas competencias técnicas. Aquí te presento un detalle de cada una de ellas :"
             />
 
             <Row className="mt-5">

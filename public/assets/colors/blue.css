@@ -1,10 +1,3 @@
-/*  Theme Name: Hiric | Responsive Bootstrap Landing Template
-    Author: Themesbrand
-    Version: 2.0.0
-    File Description: Main CSS file of the template
-*/
-
-
 .text-primary,.read-btn,
 .navbar-custom.navbar-white .navbar-nav li.active a,
 .navbar-custom.navbar-white .navbar-nav li a:hover,
@@ -53,7 +46,17 @@
 
 
 
-
+.bg-overlay {
+    background: linear-gradient(to right, #296683, #000508);
+    opacity: 0.95;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
 
 
 

@@ -11,16 +11,20 @@ class WebsiteDescription extends Component {
           <Container>
             <Row>
               <Col lg="12" className="text-center">
-                <h2 className="text-white">Build your dream website today</h2>
+                <h2 className="text-white">Desarrollando todos los días</h2>
                 <p className="pt-3 home-desc mx-auto">
-                  But nothing the copy said could convince her and so it didn’t
-                  take long until a few insidious Copy Writers ambushed her.
+                Gran parte de mis proyectos se encuentran en repositorios privados, pero te invito a que le eches un vistazo a mi GitHub. Estoy emocionado por la posibilidad de colaborar y desarrollar juntos en el futuro. 
+                <br></br>
+                <br></br>
+
+                ¡Espero que encuentres algo interesante!
                 </p>
                 <Link
-                  to="#"
+                  to="https://github.com/kevega3?tab=repositories"
                   className="btn btn-light mt-5 waves-effect waves-light"
+                  target="_black"
                 >
-                  View Plan & Pricing
+                  GitHub  <i className="mdi mdi-github" style={{fontSize:'19px'}}></i> 
                 </Link>
               </Col>
             </Row>

@@ -12,27 +12,26 @@ class Testimonials extends Component {
     testimonials: [
       {
         id: 1,
-        image: "assets/images/testimonials/user-1.jpg",
-        name: "DENNIS WILLIAMS",
-        cmpName: "Charleston",
+        name: "Interoperabilidad en Salud",
+        cmpName: "Desarrollo Privado",
         message:
-          "“I feel confident imposing change on myself. It's a lot more fun progressing than looking back. That's why I ultricies enim at malesuada nibh diam on tortor neaded to throw curve balls.”",
+          "Desarrollé e implementé un proyecto de interoperabilidad a nivel nacional con las principales EPS en Colombia. Optimicé el intercambio de historias clínicas, reduciendo costos y esfuerzo humano significativamente.",
       },
       {
         id: 2,
-        image: "assets/images/testimonials/user-2.jpg",
-        name: "LAURIE BELL",
-        cmpName: "Worcester",
+        
+        name: "Micrositios Azure",
+        cmpName: "Desarrollo Privado",
         message:
-          "“Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of quis consectetur nunc sit amet semper justo. nature and its beauty.”",
+          "Creé dos aplicaciones para compartir información sensible de manera segura. Implementé un micrositio como explorador de archivos seguro y una plataforma de carga de información utilizando Azure BlobStorage.",
       },
       {
         id: 3,
-        image: "assets/images/testimonials/user-3.jpg",
-        name: "HOWARD KELLEY",
-        cmpName: "Lynchburg",
+        
+        name: "Data Warehouse",
+        cmpName: "Desarrollo Privado",
         message:
-          "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how donec in efficitur lectus, nec lobortis metus you made them feel.”",
+          "Desarrollé una bodega de datos en la nube para proporcionar acceso seguro y disponible a las bases de datos, agilizando el proceso de compartir tablas y bases de datos en SQL Server para todos los colaboradores de la empresa.",
       },
     ],
   };
@@ -43,8 +42,8 @@ class Testimonials extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="What they've said"
-              description="The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli."
+              title="Proyectos destacados"
+              description="A lo largo de mi carrera he tenido la oportunidad de trabajar en una variedad de proyectos que me han permitido crecer tanto a nivel profesional como personal. De entre todos ellos, los siguientes desarrollos ocupan un lugar especial en mi trayectoria. No solo me desafiaron a mejorar mis habilidades en el área de tecnología, sino que también representan logros significativos en mi carrera. Cada uno de estos proyectos dejó una huella en mi camino, y me ayudó a convertirme en el profesional que soy hoy."
             />
 
             <Row className="mt-5">

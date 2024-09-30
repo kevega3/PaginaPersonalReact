@@ -23,6 +23,7 @@ const Login = () => {
   
   const toggleThem = () => {
     if (document.body.getAttribute("data-bs-theme") === "light") {
+ 
       document.body.setAttribute("data-bs-theme", "dark");
     } else {
       document.body.setAttribute("data-bs-theme", "light");

@@ -10,7 +10,6 @@ import SectionTitle from "../common/section-title";
 
 const ContactUs = () => {
   const validation = useFormik({
-    // enableReinitialize : use this flag when initial values needs to be changed
     enableReinitialize: true,
 
     initialValues: {
@@ -19,9 +18,9 @@ const ContactUs = () => {
         subject: '',
     },
     validationSchema: Yup.object({
-        name: Yup.string().required("Please Enter Your Name"),
-        email: Yup.string().required("Please Enter Your Email"),
-        subject: Yup.string().required("Please Enter Your Subject"),
+        name: Yup.string().required("Porfavor ingresa tu Nombre"),
+        email: Yup.string().required("Porfavor ingresa tu Email"),
+        subject: Yup.string().required("Porfavor ingresa un asunto al correo"),
     }),
     onSubmit: (values) => {
         console.log("values",values);
@@ -33,33 +32,32 @@ const ContactUs = () => {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Get In Touch"
-              description="We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with faucibus sapien odio measurable results."
+              title="Contacto"
+              description="Estamos aquí para ayudarte a llevar tus ideas al siguiente nivel. Si tienes preguntas, propuestas o simplemente deseas intercambiar ideas sobre desarrollo de software, no dudes en ponerte en contacto."
             />
 
             <Row>
               <Col lg="4">
                 <div className="mt-4 pt-4">
                   <p className="mt-4">
-                    <span className="h5">Office Address 1:</span>
+                    <span className="h5">Celular:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      4461 Cedar Street Moro, AR 72368
+                      +57 311 444 40 64
                     </span>
                   </p>
                   <p className="mt-4">
-                    <span className="h5">Office Address 2:</span>
+                    <span className="h5">Email:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      2467 Swick Hill Street <br />
-                      New Orleans, LA 70171
+                      antirap3@gmail.com
                     </span>
                   </p>
                   <p className="mt-4">
-                    <span className="h5">Working Hours:</span>
+                    <span className="h5">Horario de Trabajo:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      9:00AM To 6:00PM
+                      6:00AM a 6:00PM
                     </span>
                   </p>
                 </div>
@@ -79,7 +77,7 @@ const ContactUs = () => {
                       <Input
                           name="name"
                           className=""
-                          placeholder="Your name*"
+                          placeholder="Nombre Completo*"
                           type="text"
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
@@ -96,7 +94,7 @@ const ContactUs = () => {
                       <Input
                             name="email"
                             className=""
-                            placeholder="Your email*"
+                            placeholder="Email*"
                             type="email"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
@@ -115,7 +113,7 @@ const ContactUs = () => {
                       <Input
                             name="subject"
                             className=""
-                            placeholder="Your Subject.."
+                            placeholder="Tu Asunto.."
                             type="text"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
@@ -137,7 +135,7 @@ const ContactUs = () => {
                             id="comments"
                             rows="4"
                             className="form-control"
-                            placeholder="Your message..."
+                            placeholder="Tu mensaje, puedes dejarme tu contactos tambien :D ..."
                           ></textarea>
                         </div>
                       </Col>
@@ -145,7 +143,7 @@ const ContactUs = () => {
                     <Row>
                       <Col lg="12" className="text-end">
                         <Button className="submitBnt btn btn-primary">
-                          Send Message
+                          Enviar
                         </Button>
                         <div id="simple-msg"></div>
                       </Col>

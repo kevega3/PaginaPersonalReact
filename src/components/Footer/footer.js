@@ -11,7 +11,7 @@ class Footer extends Component {
     this.state = {
       footerItems: [
         {
-          title: "HIRIC",
+          title: "S M A R T",
           icon: "mdi mdi-alien",
           links: [
             { linkTitle: "Home", link: "#" },
@@ -50,6 +50,7 @@ class Footer extends Component {
   };
 
   toggleThem = () =>{
+    
     if (document.body.getAttribute("data-bs-theme") === "light") {
       document.body.setAttribute('data-bs-theme', 'dark');
     }else{
@@ -121,7 +122,7 @@ class Footer extends Component {
           style={{ left: this.state.isSwitchToggle ? "0px" : "-189px" }}
         >
           <div>
-            <h3>Select your color</h3>
+            <h3>¿Cuál color te gusta más ?   </h3>
             <ul className="pattern">
               <li>
                 <Link

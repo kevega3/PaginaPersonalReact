@@ -1,4 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
+import config from '../../config.json'
+import  '../../stylessme.css'
+import logo from '../../img/NuevoLogo.png'
+
 import {
   Nav,
   NavbarBrand,
@@ -20,13 +25,13 @@ class Navbar_Page extends Component {
     super(props);
     this.state = {
       navItems: [
-        { id: 1, idnm: "home", navheading: "Home" },
+        { id: 1, idnm: "home", navheading: "Inicio" },
         { id: 2, idnm: "features", navheading: "Features" },
-        { id: 3, idnm: "services", navheading: "Services" },
-        { id: 3, idnm: "about", navheading: "About" },
+        { id: 3, idnm: "services", navheading: "Habilidades" },
+        { id: 3, idnm: "about", navheading: "Sobre mí" },
         { id: 4, idnm: "pricing", navheading: "Pricing" },
         { id: 5, idnm: "blog", navheading: "Blog" },
-        { id: 6, idnm: "contact", navheading: "Contact" },
+        { id: 6, idnm: "contact", navheading: "Contacto" },
       ],
       isOpenMenu: false,
     };
@@ -57,6 +62,11 @@ class Navbar_Page extends Component {
       windowScroll();
   });
 
+  function link(){
+    let url = config.urlHojaVida
+    window.open(url, '_blank');
+  }
+
     //Store all Navigationbar Id into TargetID variable(Used for Scrollspy)
     let TargetId = this.state.navItems.map((item) => {
       return item.idnm;
@@ -74,7 +84,8 @@ class Navbar_Page extends Component {
             >
               <Container>
                 <NavbarBrand className="logo text-uppercase" href="/">
-                  <i className="mdi mdi-alien"></i>Hiric
+                  {/* <i className="mdi mdi-alien"></i>Hiric */}
+                  <img src={logo} style={{width:50}}/>
                 </NavbarBrand>
 
                 <NavbarToggler className="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" onClick={this.toggle}>
@@ -112,9 +123,11 @@ class Navbar_Page extends Component {
                         <Button
                           type="button"
                           color="primary"
+                          style={{color:"white"}}
                           className=" navbar-btn btn-rounded waves-effect waves-light"
+                          onClick={link}
                         >
-                          Try it Free
+                          Mira HV
                         </Button>
                       </NavItem>
                     </Nav>

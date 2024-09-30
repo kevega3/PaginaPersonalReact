@@ -1,29 +1,4 @@
-/* Template Name: Hiric
-   Author: Themesbrand
-   Version: 2.2.0
-   File Description: Main Css file of the template
-*/
-/****************************************\
 
-01.general
-02.helper
-03.components
-04.menu
-05.home
-06.features
-07.services
-08.cta
-90.pricing
-10.team
-11.testimonial
-12.blog
-13.contact
-14.footer
-15.authentication
-16.switcher
-17.responsive
-
-*****************************************/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Sarabun:wght@400;500;600;700&display=swap");
 :root,
 [data-bs-theme=light] {
@@ -135,17 +110,7 @@ p {
   flex-direction: row;
 }
 
-.bg-overlay {
-  background: linear-gradient(to right, #363795, #005c97);
-  opacity: 0.95;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-}
+
 
 .btn-rounded {
   border-radius: 30px;
@@ -1521,7 +1486,9 @@ iframe {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 2.5vw;
   color: #f4f4f4;
+  opacity: 0.28;
 }
 .testimonial-decs p {
   line-height: 24px;

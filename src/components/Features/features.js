@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
+import config from '../../config.json'
 
 class Features extends Component {
   render() {
@@ -11,26 +12,24 @@ class Features extends Component {
             <Row className="align-items-center">
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">
-                  <h3>
-                    A digital web design studio creating modern & engaging
-                    online
-                  </h3>
+                <h3>Yo Soy <span>Kevin's</span> Vega</h3>
                   <p className="text-muted web-desc">
-                    Separated they live in Bookmarksgrove right at the coast of
-                    the Semantics, a large language ocean.
+                    Desarrollador de Software con mas de 2 años de experiencia abarcando el desarrollo de aplicaciones de gestión de información, diseño web personalizado, y análisis y gestión de bases de datos.Con una actitud proactiva y orientada a resultados, estoy siempre en búsqueda de nuevos retos profesionales que me permitan seguir creciendo y aportando valor a las organizaciones.
                   </p>
+
                   <ul className="text-muted list-unstyled mt-4 features-item-list">
-                    <li className="">We put a lot of effort in design.</li>
+                    <li className="">Desarrollador Full Stack</li>
                     <li className="">
-                      The most important ingredient of successful website.
+                      Ingeniero de Software
                     </li>
-                    <li className="">Submit Your Orgnization.</li>
+                  
                   </ul>
                   <Link
-                    to="#"
+                    to={config.urlHojaVida}
+                    target={"_blank"}
                     className="btn btn-primary mt-4 waves-effect waves-light"
                   >
-                    Learn More <i className="mdi mdi-arrow-right"></i>
+                    Mirar Hv
                   </Link>
                 </div>
               </Col>

@@ -21,7 +21,7 @@ class FooterLinks extends Component {
               <Col lg="12">
                 <div className="float-sm-start pull-none">
                   <p className="copy-rights  mb-3 mb-sm-0">
-                    2023 © Hiric - Themesbrand
+                    2023 © S M A R T
                   </p>
                 </div>
                 <div className="float-sm-end pull-none copyright ">

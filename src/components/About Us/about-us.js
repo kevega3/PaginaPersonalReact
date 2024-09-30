@@ -9,28 +9,10 @@ class AboutUs extends Component {
     members: [
       {
         id: 1,
-        name: "Frank Johnson",
-        image: "assets/images/team/img-1.jpg",
-        post: "CEO",
-      },
-      {
-        id: 2,
-        name: "Elaine Stclair",
-        image: "assets/images/team/img-2.jpg",
-        post: "DESIGNER",
-      },
-      {
-        id: 3,
-        name: "Wanda Arthur",
-        image: "assets/images/team/img-3.jpg",
-        post: "DEVELOPER",
-      },
-      {
-        id: 4,
-        name: "Joshua Stemple",
-        image: "assets/images/team/img-4.jpg",
-        post: "MANAGER",
-      },
+        name: "Kevin's Vega Quiroga ",
+        image: "assets/images/team/Foto_30_05.jpg",
+        post: "Ingeniero de Software",
+      }
     ],
   };
   render() {
@@ -42,21 +24,16 @@ class AboutUs extends Component {
               <Col lg={{ size: 8, offset: 2 }}>
                 <div className="about-title mx-auto text-center">
                   <h2 className="font-weight-light">
-                    A Digital web studio creating stunning &amp; Engaging online
-                    Experiences{" "}
+                    Sobre mí
                   </h2>
                   <p className="text-muted pt-4">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                    natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus donec various versions have evolved quam
-                    felis.
+                  ¡Hola! mi nombre es <b> Kevin's Vega Quiroga  </b>soy <b>Ingeniero de Software certificado</b> por la <b> Fundación Compensar </b>y  <b>Tecnólogo certificado </b>  por el <b>SENA</b>, con una sólida formación en <b>desarrollo de software</b> y experiencia en la gestión de proyectos tecnológicos. Actualmente, trabajo en el área de Tecnología e Innovación, donde he adquirido habilidades técnicas clave en interoperabilidad, automatización y creación de software especializado. <br></br><br></br> <b>Estoy siempre abierto a nuevas oportunidades laborales </b>que me permitan continuar creciendo y enfrentar nuevos desafíos. Mi enfoque se centra en desarrollar soluciones eficientes y de alto impacto, tanto en términos tecnológicos como en resultados para los usuarios.
                   </p>
                 </div>
               </Col>
             </Row>
-            <Row className="mt-5">
-              {/* Render Team members */}
+            <Row className="mt-5" style={{justifyContent:"center"}}>
+              
               {this.state.members.map((member, key) => (
                 <TeamBox
                   key={key}

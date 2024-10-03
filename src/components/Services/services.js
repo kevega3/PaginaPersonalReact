@@ -70,7 +70,7 @@ class Services extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section bg-light" id="services">
+        <section className="section bg-light " id="services">
           <Container>
             {/* Render section title */}
             <SectionTitle

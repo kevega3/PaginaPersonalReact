@@ -11,10 +11,13 @@ class GetStarted extends Component {
             <Container>
                 <Row>
                     <Col lg={{size :8, offset:2}} className="text-center">
-                        <h1 className="get-started-title text-white">Let's Get Started</h1>
+                        <h1 className="get-started-title text-white">Conectando con profesionales</h1>
                         <div className="section-title-border mt-4 bg-white"></div>
-                        <p className="section-subtitle font-secondary text-white text-center pt-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-                        <Link to="#" className="btn btn-light waves-effect mt-4">Get Started <i className="mdi mdi-arrow-right"></i> </Link>
+                        <p className="section-subtitle font-secondary text-white text-center pt-4">Aunque gran parte de mi trabajo está enfocado en proyectos privados, te invito a que visites mi perfil de LinkedIn. Estoy siempre abierto a nuevas oportunidades de colaboración y networking para crecer juntos profesionalmente.</p>
+                        <br></br>
+                        <p>¡Espero que podamos conectar pronto!</p> 
+
+                        <Link to="https://www.linkedin.com/in/kevins-vega-quiroga-01a7b71ab/" target='_black' className="btn btn-light waves-effect mt-4">Linkedin <i className="mdi mdi-linkedin" style={{fontSize:'19px'}}></i> </Link>
                     </Col>
                 </Row>
             </Container>

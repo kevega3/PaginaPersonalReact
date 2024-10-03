@@ -5,11 +5,8 @@ import { Container, Row, Col } from "reactstrap";
 class FooterLinks extends Component {
   state = {
     socials: [
-      { icon: "mdi mdi-facebook", link: "#" },
-      { icon: "mdi mdi-twitter", link: "#" },
-      { icon: "mdi mdi-linkedin", link: "#" },
-      { icon: "mdi mdi-google-plus", link: "#" },
-      { icon: "mdi mdi-microsoft-xbox", link: "#" },
+      { icon: "mdi mdi-facebook", link: "https://www.facebook.com/kevin.vegaquiroga.1/?locale=es_LA" },
+      { icon: "mdi mdi-linkedin", link: "https://www.linkedin.com/in/kevins-vega-quiroga-01a7b71ab/" },
     ],
   };
   render() {

@@ -55,21 +55,8 @@ class Pricing extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section bg-light" id="pricing">
-          <Container>
-            {/* Render section title */}
-            <SectionTitle
-              title="Our Pricing"
-              description="Call to action pricing table is really crucial to your for your business website. Make your bids stand-out with amazing options."
-            />
-
-            <Row className="mt-5">
-              {/* Render Pricing Box */}
-              {this.state.pricings.map((pricing, key) => (
-                <PricingBox key={key} pricing={pricing} />
-              ))}
-            </Row>
-          </Container>
+        <section className="" id="pricing">
+       
         </section>
       </React.Fragment>
     );

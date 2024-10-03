@@ -16,7 +16,6 @@ const routes = [
   { path: "/signup", component: <SignUp /> },
   { path: "/login", component: <Login /> },
   { path: "/password_forget", component: <PasswordForget /> },
-
   { path: "/index9", component: <Index9 /> },
   { path: "/index8", component: <Index8 /> },
   { path: "/index7", component: <Index7 /> },

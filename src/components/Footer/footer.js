@@ -12,29 +12,19 @@ class Footer extends Component {
       footerItems: [
         {
           title: "S M A R T",
-          icon: "mdi mdi-alien",
           links: [
-            { linkTitle: "Home", link: "#" },
-            { linkTitle: "About us", link: "#" },
-            { linkTitle: "Careers", link: "#" },
-            { linkTitle: "Contact us", link: "#" },
+            { linkTitle: "Inicio", link: "#home" },
+            { linkTitle: "Resumen", link: "#features" },
+            { linkTitle: "Habilidades", link: "#services" },
+            { linkTitle: "Sobre Mí", link: "#about  " },
+            { linkTitle: "Certificados", link: "#blog" },
           ],
         },
         {
-          title: "Information",
+          title: "Informacion de contacto",
           links: [
-            { linkTitle: "Terms & Condition", link: "#" },
-            { linkTitle: "About us", link: "#" },
-            { linkTitle: "Jobs", link: "#" },
-            { linkTitle: "Bookmarks", link: "#" },
-          ],
-        },
-        {
-          title: "Support",
-          links: [
-            { linkTitle: "FAQ", link: "#" },
-            { linkTitle: "Contact", link: "#" },
-            { linkTitle: "Disscusion", link: "#" },
+            { linkTitle: "Celular: +57 311 444 40 64", link: "#" },
+            { linkTitle: "Email: antirap3@gmail.com", link: "#" }
           ],
         },
       ],
@@ -67,11 +57,11 @@ class Footer extends Component {
       <React.Fragment>
         <footer className="footer">
           <Container>
-            <Row>
+            <Row style={{justifyContent:"center"}}>
               {this.state.footerItems.map((item, key) => (
                 <Col lg="3" className="mt-4" key={key}>
                 {item.icon ?  
-                <Link className="footer-logo text-uppercase" href="#">
+                <Link className="footer-logo text-uppercase" href="/">
                         <i className={item.icon}></i>
                         <span>{item.title}</span>
                     </Link>
@@ -90,12 +80,14 @@ class Footer extends Component {
               ))}
 
               <Col lg="3" className="mt-4">
-                <h4>Subscribe</h4>
+                <h4>
+                  Términos y condiciones
+                </h4>
                 <div className="text-muted mt-4">
                   <p>
-                    In an ideal world this text wouldn’t exist, a client would
-                    acknowledge the importance of having web copy before the
-                    design starts.
+                  Todos los derechos del contenido de esta página web pertenecen a Smart y están protegidos por las leyes de propiedad intelectual.
+
+
                   </p>
                 </div>
                 <Form className="form subscribe">

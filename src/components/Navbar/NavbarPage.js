@@ -26,11 +26,10 @@ class Navbar_Page extends Component {
     this.state = {
       navItems: [
         { id: 1, idnm: "home", navheading: "Inicio" },
-        { id: 2, idnm: "features", navheading: "Features" },
+        { id: 2, idnm: "features", navheading: "Resumen" },
         { id: 3, idnm: "services", navheading: "Habilidades" },
         { id: 3, idnm: "about", navheading: "Sobre mí" },
-        { id: 4, idnm: "pricing", navheading: "Pricing" },
-        { id: 5, idnm: "blog", navheading: "Blog" },
+        { id: 5, idnm: "blog", navheading: "Certificados" },
         { id: 6, idnm: "contact", navheading: "Contacto" },
       ],
       isOpenMenu: false,

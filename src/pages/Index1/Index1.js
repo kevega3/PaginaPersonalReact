@@ -48,12 +48,12 @@ class Index1 extends Component {
 
                 {/* Importing Pricing */}
                 <Pricing />
-
+ {/* Importing Get Started */}
+ <GetStarted />
                 {/* Importing Testimonials */}
                 <Testimonials />
 
-                {/* Importing Get Started */}
-                <GetStarted />
+               
 
                 {/* Importing Blog */}
                 <Blog />

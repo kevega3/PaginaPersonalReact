@@ -4,8 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 class Clients extends Component {
   state = {
     clients: [
-      { id: 1, img: "assets/images/clients/smart.png" },
-      { id: 3, img: "assets/images/clients/3.png" },
+      { id: 1, img: "assets/images/clients/smart.png" }
    
     ],
   };

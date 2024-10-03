@@ -38,7 +38,7 @@ class Testimonials extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section" id="testi">
+        <section className="section " id="testi">
           <Container>
             {/* Render section title */}
             <SectionTitle

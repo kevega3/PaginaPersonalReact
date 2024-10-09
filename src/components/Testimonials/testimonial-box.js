@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class TestimonialBox extends Component {
   render() {
@@ -26,6 +27,15 @@ class TestimonialBox extends Component {
                 <p className="text-muted text-justify mb-0" style={{ "text-align": "justify"}}>
                   {this.props.testimonial.message}
                 </p>
+                
+                { 
+                  this.props.testimonial.link && (
+                    <Link to={this.props.testimonial.link} target="_blank" className="read-btn">
+                      Visitar <i className="mdi mdi-arrow-right"></i>
+                    </Link>
+                  ) 
+                }
+                
               </div>
             </div>
           </div>

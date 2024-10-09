@@ -33,6 +33,14 @@ class Testimonials extends Component {
         message:
           "Desarrollé una bodega de datos en la nube para proporcionar acceso seguro y disponible a las bases de datos, agilizando el proceso de compartir tablas y bases de datos en SQL Server para todos los colaboradores de la empresa.",
       },
+      {
+        id: 4,
+        name: "MovieSmart",
+        cmpName: "Desarrollo hobby ",
+        message:
+          "Este proyecto es una página web creada como hobby, donde los usuarios pueden descubrir fácilmente trailers de películas recientes. Aprovechando las APIs de TMDB, la web muestra avances de títulos populares y próximos estrenos con información actualizada.",
+        link: "https://moviesmart.vercel.app/"
+      },
     ],
   };
   render() {

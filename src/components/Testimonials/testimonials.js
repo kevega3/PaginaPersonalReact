@@ -19,27 +19,36 @@ class Testimonials extends Component {
       },
       {
         id: 2,
-        
+        name: "Sinco-AYF",
+        cmpName: "Desarrollo hobby ",
+        message:
+          "Este proyecto es una página web creada como hobby para gestionar y automatizar la venta de vehículos. Permite a los usuarios registrar sus ventas y generar reportes automáticos, simplificando el seguimiento de inventario y el análisis de ventas.",
+        link: "https://front-sincoayf.vercel.app/",
+      },
+      {
+        id: 3,
+
         name: "Micrositios Azure",
         cmpName: "Desarrollo Privado",
         message:
           "Creé dos aplicaciones para compartir información sensible de manera segura. Implementé un micrositio como explorador de archivos seguro y una plataforma de carga de información utilizando Azure BlobStorage.",
       },
+
       {
-        id: 3,
-        
+        id: 4,
+
         name: "Data Warehouse",
         cmpName: "Desarrollo Privado",
         message:
           "Desarrollé una bodega de datos en la nube para proporcionar acceso seguro y disponible a las bases de datos, agilizando el proceso de compartir tablas y bases de datos en SQL Server para todos los colaboradores de la empresa.",
       },
       {
-        id: 4,
+        id: 5,
         name: "MovieSmart",
         cmpName: "Desarrollo hobby ",
         message:
           "Este proyecto es una página web creada como hobby, donde los usuarios pueden descubrir fácilmente trailers de películas recientes. Aprovechando las APIs de TMDB, la web muestra avances de títulos populares y próximos estrenos con información actualizada.",
-        link: "https://moviesmart.vercel.app/"
+        link: "https://moviesmart.vercel.app/",
       },
     ],
   };

@@ -23,16 +23,22 @@ class Services extends Component {
           "Con Node.js, desarrollo aplicaciones del lado del servidor que manejan múltiples conexiones de manera eficiente, utilizando JavaScript para la creación de APIs RESTful y la gestión de la lógica de negocio.",
       },
       {
+        title: "C# | .NET Core",
+        icon: "pe-7s-global",
+        description:
+          "Uso Node-RED para la integración de servicios y la automatización de flujos de trabajo, permitiendo la conexión entre dispositivos IoT y APIs de una manera visual y fácil de manejar.",
+      },
+      {
         title: "Node-RED",
         icon: "pe-7s-rocket",
         description:
           "Uso Node-RED para la integración de servicios y la automatización de flujos de trabajo, permitiendo la conexión entre dispositivos IoT y APIs de una manera visual y fácil de manejar.",
       },
       {
-        title: "PHP",
-        icon: "pe-7s-hammer",
+        title: "JavaScript",
+        icon: "pe-7s-light",
         description:
-          "Empleo PHP para el desarrollo de aplicaciones web del lado del servidor, creando soluciones robustas y eficientes para la gestión de contenido y la interacción con bases de datos.",
+          "JavaScript es el lenguaje principal que utilizo para desarrollar tanto el front-end como el back-end de mis aplicaciones, permitiéndome crear interactividad y lógica del lado del cliente y del servidor.",
       },
       {
         title: "SQL",
@@ -58,14 +64,7 @@ class Services extends Component {
         description:
           "Trabajo en entornos Linux para la administración de servidores y la implementación de aplicaciones, aprovechando su robustez y seguridad para la ejecución de servicios críticos.",
       },
-      {
-        title: "JavaScript",
-        icon: "pe-7s-light",
-        description:
-          "JavaScript es el lenguaje principal que utilizo para desarrollar tanto el front-end como el back-end de mis aplicaciones, permitiéndome crear interactividad y lógica del lado del cliente y del servidor.",
-      },
     ],
-    
   };
   render() {
     return (

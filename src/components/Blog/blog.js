@@ -14,14 +14,16 @@ class Blog extends Component {
         id: 1,
         topic: "SENA",
         title: "Tecnologo en Análisis y Desarrollo de Software",
-        description: "Certificación como tecnólogo en desarrollo y análisis de software.",
+        description:
+          "Certificación como tecnólogo en desarrollo y análisis de software.",
         link: "assets/images/certificados/Certificado_SENA.pdf",
       },
       {
         id: 2,
         topic: "HL7 GOV FHIR CAMP",
         title: "Formacion Estandar HL7",
-        description: "Formación sobre el estándar de interoperabilidad HL7 FHIR.",
+        description:
+          "Formación sobre el estándar de interoperabilidad HL7 FHIR.",
         link: "assets/images/certificados/HL7.pdf",
       },
       {
@@ -35,7 +37,8 @@ class Blog extends Component {
         id: 4,
         topic: "Udemy",
         title: "Cero a Experto JavaScript",
-        description: "Dominio de JavaScript, desde los fundamentos hasta nivel avanzado.",
+        description:
+          "Dominio de JavaScript, desde los fundamentos hasta nivel avanzado.",
         link: "assets/images/certificados/JavaScrip.pdf",
       },
       {
@@ -49,7 +52,8 @@ class Blog extends Component {
         id: 6,
         topic: "EUROINNOVA",
         title: "Analista y calidad en .NET",
-        description: "Certificación en análisis y aseguramiento de calidad en .NET.",
+        description:
+          "Certificación en análisis y aseguramiento de calidad en .NET.",
         link: "assets/images/certificados/Analista_NET.pdf",
       },
       {
@@ -70,25 +74,34 @@ class Blog extends Component {
         id: 9,
         topic: "Escuela de privacidad",
         title: "Protección de Datos Personales",
-        description: "Formación en normativas de protección de datos personales.",
+        description:
+          "Formación en normativas de protección de datos personales.",
         link: "assets/images/certificados/Tratamiento de datos personales.pdf",
       },
       {
         id: 10,
         topic: "Udemy",
         title: "Desarrollo Web - FrontEnd Web Developer!",
-        description: "Curso completo sobre desarrollo web enfocado en FrontEnd.",
+        description:
+          "Curso completo sobre desarrollo web enfocado en FrontEnd.",
         link: "assets/images/certificados/FrondEnd.pdf",
       },
       {
         id: 11,
         topic: "AWS Academy",
         title: "AWS Academy Cloud Foundations",
-        description: "Fundamentos de computación en la nube a través de AWS Academy.",
+        description:
+          "Fundamentos de computación en la nube a través de AWS Academy.",
         link: "assets/images/certificados/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20240517-8-b4b2cy (1).pdf",
       },
-    ]
-    
+      {
+        id: 12,
+        topic: "Udemy",
+        title: "Full Stack React/APl Net C#/SQLServer",
+        description: "Fundamentos Desarrollo con C# y React.",
+        link: "assets/images/certificados/React-C.pdf",
+      },
+    ],
   };
   render() {
     return (

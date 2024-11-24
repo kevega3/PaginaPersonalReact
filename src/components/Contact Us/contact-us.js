@@ -42,7 +42,6 @@ const ContactUs = () => {
       ),
     }),
     onSubmit: async (values) => {
-      console.log("API Token:", process.env.REACT_APP_APITOKEN);
       try {
         console.log(values);
         const { data: response } = await PostMensaje(values);

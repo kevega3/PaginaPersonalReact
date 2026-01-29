@@ -50,3 +50,7 @@ coverage/
 
 # TypeScript
 *.tsbuildinfo
+.agents/
+.github/
+.agents
+.github

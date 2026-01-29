@@ -39,7 +39,7 @@ const Contact = () => {
                     <div className="col-lg-4">
                         <div className="mt-4 pt-4">
                             <p className="mt-4"><span className="h5">Celular:</span> <br/> <span className="text-muted d-block mt-2">+57 311 444 40 64</span></p>
-                            <p className="mt-4"><span className="h5">Email:</span> <br/> <span className="text-muted d-block mt-2">antirap3@gmail.com</span></p>
+                            <p className="mt-4"><span className="h5">Email:</span> <br/> <span className="text-muted d-block mt-2">kevinsvegaquiroga@gmail.com</span></p>
                             <p className="mt-4"><span className="h5">Horario de Trabajo:</span> <br/> <span className="text-muted d-block mt-2">6:00AM a 6:00PM</span></p>
                         </div>
                     </div>

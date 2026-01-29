@@ -24,7 +24,7 @@ class Footer extends Component {
           title: "Informacion de contacto",
           links: [
             { linkTitle: "Celular: +57 311 444 40 64", link: "#" },
-            { linkTitle: "Email: antirap3@gmail.com", link: "#" }
+            { linkTitle: "Email: kevinsvegaquiroga@gmail.com", link: "#" }
           ],
         },
       ],

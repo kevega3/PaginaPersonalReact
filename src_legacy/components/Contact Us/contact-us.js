@@ -87,7 +87,7 @@ const ContactUs = () => {
                   <span className="h5">Email:</span>
                   <br />{" "}
                   <span className="text-muted d-block mt-2">
-                    antirap3@gmail.com
+                    kevinsvegaquiroga@gmail.com
                   </span>
                 </p>
                 <p className="mt-4">

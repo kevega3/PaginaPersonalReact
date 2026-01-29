@@ -54,3 +54,5 @@ coverage/
 .github/
 .agents
 .github
+.next/
+.next

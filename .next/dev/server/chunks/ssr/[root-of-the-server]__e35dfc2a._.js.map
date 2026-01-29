@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/Proyects/DEV_NEXT/PaginaPersonalReact/src/app/page.tsx"],"sourcesContent":["// import Navbar from \"@/components/Navbar/Navbar\";\n// import Section from \"@/components/Section/Section\";\n\nexport default function Home() {\n  return (\n    <main>\n      {/* <Navbar navClass=\"navbar-white\" /> */}\n      {/* <Section /> */}\n      {/* El resto de las secciones se irán migrando progresivamente */}\n      <h1>Hola Mundo</h1>\n    </main>\n  );\n}\n"],"names":[],"mappings":"AAAA,mDAAmD;AACnD,sDAAsD;;;;;;;AAEvC,SAAS;IACtB,qBACE,8OAAC;kBAIC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV"}}]
-}

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="footer bg-dark">
+        <footer className="footer" style={{backgroundColor: '#172330'}}>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-3 mt-4">
@@ -28,7 +28,7 @@ export default function Footer() {
                         <div className="text-muted mt-4">
                             <ul className="list-unstyled footer-list">
                                 <li><Link href="#">Celular: +57 311 444 40 64</Link></li>
-                                <li><Link href="#">Email: kevinsvegaquiroga@gmail.com</Link></li>
+                                <li><Link href="#">Email: antirap3@gmail.com</Link></li>
                             </ul>
                         </div>
                     </div>

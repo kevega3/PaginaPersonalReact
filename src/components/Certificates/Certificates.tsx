@@ -91,7 +91,7 @@ const Certificates = () => {
     ];
 
     return (
-        <section className="section" id="blog">
+        <section className="section" id="blog" style={{backgroundColor: '#172330'}}>
             <div className="container">
                 <SectionTitle 
                     title="Certificaciones" 

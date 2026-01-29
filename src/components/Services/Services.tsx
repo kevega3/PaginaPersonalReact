@@ -54,7 +54,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="section bg-light" id="services">
+    <section className="section" id="services" style={{backgroundColor: '#172330'}}>
       <div className="container">
         <SectionTitle
             title="Habilidades"

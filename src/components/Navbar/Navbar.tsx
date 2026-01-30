@@ -92,7 +92,7 @@ export default function Navbar({ navClass }: { navClass?: string }) {
                                     style={{ color: "white" }}
                                     onClick={openResume}
                                 >
-                                    Mira HV
+                                    Descargar CV
                                 </button>
                             </li>
                         </ul>

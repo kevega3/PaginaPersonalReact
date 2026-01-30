@@ -29,7 +29,7 @@ class Features extends Component {
                     target={"_blank"}
                     className="btn btn-primary mt-4 waves-effect waves-light"
                   >
-                    Mirar Hv
+                    Descargar CV
                   </Link>
                 </div>
               </Col>

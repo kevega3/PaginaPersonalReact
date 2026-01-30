@@ -39,7 +39,7 @@ export default function RootLayout({
         {/* Tema por defecto */}
         <link rel="stylesheet" id="colorTheme" type="text/css" href="/assets/colors/cyan.css" />
       </head>
-      <body data-bs-theme="dark">
+      <body data-bs-theme="dark" suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

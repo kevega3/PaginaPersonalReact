@@ -127,7 +127,7 @@ class Navbar_Page extends Component {
                           className=" navbar-btn btn-rounded waves-effect waves-light"
                           onClick={link}
                         >
-                          Mira HV
+                          Descargar CV
                         </Button>
                       </NavItem>
                     </Nav>

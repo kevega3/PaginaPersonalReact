@@ -12,14 +12,15 @@ export default function Features() {
         <div className="row align-items-center">
           <div className="col-lg-5 order-2 order-lg-1">
             <div className="features-box mt-5 mt-lg-0">
-              <h3>Yo Soy <span>Kevin''s</span> Vega</h3>
+              <h3>Perfil <span>Profesional</span></h3>
               <p className="text-muted web-desc">
-                Ingeniero Desarrollador de Software con mas de 2 años de experiencia abarcando el desarrollo de aplicaciones de gestión de información, diseño web personalizado, y análisis y gestión de bases de datos.Con una actitud proactiva y orientada a resultados, estoy siempre en búsqueda de nuevos retos profesionales que me permitan seguir creciendo y aportando valor a las organizaciones.
+                Ingeniero de Software especializado en la arquitectura y desarrollo de sistemas de información escalables. Cuento con mas de 4 años de experiencia y una trayectoria sólida integrando tecnologías modernas (React/Next.js) con ecosistemas empresariales (.NET/Azure), enfocándome no solo en la escritura de código, sino en la entrega de valor tangible mediante la optimización de procesos y la interoperabilidad de datos.
               </p>
 
               <ul className="text-muted list-unstyled mt-4 features-item-list">
-                <li style={{marginBottom: '10px'}}>Desarrollador Full Stack</li>
-                <li>Ingeniero de Software</li>
+                <li style={{marginBottom: '10px'}}>Arquitectura de Software & Cloud</li>
+                <li style={{marginBottom: '10px'}}>Interoperabilidad Clínica (HL7 FHIR)</li>
+                <li>Desarrollo Full Stack Multiplataforma</li>
               </ul>
               <Link
                 href={config.urlHojaVida}
@@ -27,7 +28,7 @@ export default function Features() {
                 className="btn btn-primary mt-4 waves-effect waves-light"
                 style={{color: "white"}}
               >
-                Mirar Hv
+                Descargar CV 
               </Link>
             </div>
           </div>

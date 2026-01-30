@@ -5,9 +5,9 @@ const AboutUs = () => {
     const members = [
         {
             id: 1,
-            name: "Kevin''s Vega Quiroga",
+            name: "Kevin's Vega Quiroga",
             image: "/assets/images/team/Foto_30_05.jpg",
-            post: "Ingeniero de Software",
+            post: "Ingeniero de Software | Full Stack Developer",
         }
     ];
 
@@ -19,9 +19,9 @@ const AboutUs = () => {
             <div className="about-title mx-auto text-center">
               <h2 className="font-weight-light">Sobre mí</h2>
               <p className="text-muted pt-4">
-                ¡Hola! mi nombre es <b> Kevin''s Vega Quiroga </b>soy <b>Ingeniero de Software certificado</b> por la <b> Fundación Compensar </b>y <b>Tecnólogo certificado </b> por el <b>SENA</b>, con una sólida formación en <b>desarrollo de software</b> y experiencia en la gestión de proyectos tecnológicos. Actualmente, trabajo en el área de Tecnología e Innovación, donde he adquirido habilidades técnicas clave en interoperabilidad, automatización y creación de software especializado. 
-                <br/><br/> 
-                <b>Estoy siempre abierto a nuevas oportunidades laborales </b>que me permitan continuar creciendo y enfrentar nuevos desafíos. Mi enfoque se centra en desarrollar soluciones eficientes y de alto impacto, tanto en términos tecnológicos como en resultados para los usuarios.
+                Hola, soy <b>Kevin's Vega Quiroga</b>, <b>Ingeniero de Software</b> y <b>Tecnólogo SENA</b> con experiencia sólida en el ciclo completo de desarrollo, desde la arquitectura hasta el despliegue. Me especializo en la construcción de <b>soluciones interoperables</b> y sistemas de alta disponibilidad.
+                <br/><br/>
+                Actualmente lidero iniciativas de <b>Innovación Tecnológica</b>, enfocándome en automatización y arquitecturas modernas (Microservicios, Cloud, HL7 FHIR). Mi objetivo no es solo escribir código, sino diseñar sistemas escalables que resuelvan problemas complejos de negocio. Estoy listo para aportar mi experiencia técnica y visión estratégica a equipos de alto rendimiento.
               </p>
             </div>
           </div>

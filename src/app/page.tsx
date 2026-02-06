@@ -31,10 +31,11 @@ export default async function Home() {
       <Navbar navClass="navbar-white" />
       <Section />
       <Clients />
-      <Features />
-      <Services data={data.services} />
-      <WebsiteDescription />
       <AboutUs />
+       <WebsiteDescription />
+      <Services data={data.services} />
+  
+      
       <GetStarted />
       <Projects data={data.projects} />
       <Certificates data={data.certificates} />

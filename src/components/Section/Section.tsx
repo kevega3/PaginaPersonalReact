@@ -28,9 +28,16 @@ export default function Section() {
             <h1 className="home-title">
             Ingeniero Desarrollador de Software
             </h1>
-            <p className="pt-3 home-desc mx-auto">
-            Con vasta experiencia en el desarrollo de software, me especializo en crear productos y soluciones tecnológicas que aporten valor y eficiencia a cada proyecto. Mi pasión es construir aplicaciones que sean tanto innovadoras como fáciles de usar, asegurándome de que cada detalle esté alineado con las necesidades del usuario.
-            </p>
+            
+            <div className="mt-4 pt-2">
+              <a href="#testi" className="btn btn-primary btn-rounded me-3 mb-2">
+                Ver Proyectos <i className="mdi mdi-arrow-down ps-1"></i>
+              </a>
+              <a href="#contact" className="btn btn-outline-white btn-rounded mb-2">
+                Contáctame
+              </a>
+            </div>
+          
           </div>
         </div>
       </div>

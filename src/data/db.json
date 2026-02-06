@@ -72,7 +72,7 @@
       "name": "MovieSmart Explorer",
       "cmpName": "Proyecto Personal",
       "message": "SPA (Single Page Application) enfocada en el consumo optimizado de APIs externas (TMDB). Implementación de búsquedas en tiempo real, lazy loading de imágenes y diseño responsivo avanzado.",
-      "link": "#"
+      "link": "https://moviesmart.vercel.app/"
     }
   ],
   "certificates": [

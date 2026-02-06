@@ -19,9 +19,9 @@ const AboutUs = () => {
             <div className="about-title mx-auto text-center">
               <h2 className="font-weight-light">Sobre mí</h2>
               <p className="text-muted pt-4">
-                Hola, soy <b>Kevin's Vega Quiroga</b>, <b>Ingeniero de Software</b> y <b>Tecnólogo SENA</b> con experiencia sólida en el ciclo completo de desarrollo, desde la arquitectura hasta el despliegue. Me especializo en la construcción de <b>soluciones interoperables</b> y sistemas de alta disponibilidad.
+                Hola, soy <b>Kevin's Vega Quiroga</b>, <b>Ingeniero de Software </b>con mas de<b> 4 años de experiencia</b>, enfocado en la transformación digital del <b>sector salud (HealthTech)</b>. Poseo una sólida experiencia diseñando soluciones de <b>interoperabilidad clínica</b>, orquestando integraciones complejas bajo estándares como <b>HL7 FHIR</b> y arquitecturas distribuidas.
                 <br/><br/>
-                Actualmente lidero iniciativas de <b>Innovación Tecnológica</b>, enfocándome en automatización y arquitecturas modernas (Microservicios, Cloud, HL7 FHIR). Mi objetivo no es solo escribir código, sino diseñar sistemas escalables que resuelvan problemas complejos de negocio. Estoy listo para aportar mi experiencia técnica y visión estratégica a equipos de alto rendimiento.
+                Como apasionado por la <b>Innovación Tecnológica</b>, no solo construyo software, sino ecosistemas escalables de alta disponibilidad. Mi objetivo es resolver desafíos críticos de negocio mediante tecnología robusta, asegurando que la información vital fluya de manera segura y eficiente entre instituciones.
               </p>
             </div>
           </div>

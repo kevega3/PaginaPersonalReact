@@ -56,3 +56,5 @@ coverage/
 .github
 .next/
 .next
+.env.local
+*.sql

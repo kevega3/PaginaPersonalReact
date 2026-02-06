@@ -28,7 +28,7 @@ export default function Footer() {
                         <div className="text-muted mt-4">
                             <ul className="list-unstyled footer-list">
                                 <li><Link href="#">Celular: +57 311 444 40 64</Link></li>
-                                <li><Link href="#">Email: antirap3@gmail.com</Link></li>
+                                <li><Link href="#">Email: kevinsvegaquiroga@gmail.com</Link></li>
                             </ul>
                         </div>
                     </div>

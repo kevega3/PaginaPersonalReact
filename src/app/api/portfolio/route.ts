@@ -1,6 +1,15 @@
 import { NextResponse } from 'next/server';
-import db from '@/data/db.json';
+import { getPortfolioData } from '@/data/db-client';
 
 export async function GET() {
-  return NextResponse.json(db);
+  try {
+    const data = await getPortfolioData();
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error('Error fetching portfolio data:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch portfolio data' },
+      { status: 500 }
+    );
+  }
 }

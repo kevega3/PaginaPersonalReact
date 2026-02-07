@@ -1,5 +1,6 @@
 import { Sarabun, Rubik } from "next/font/google"; // Importamos las fuentes de Google optimizadas por Next.js
 import "./globals.css"; 
+import VisitTracker from "@/components/VisitTracker/VisitTracker";
 
 // Configuramos las fuentes
 const sarabun = Sarabun({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <link rel="stylesheet" id="colorTheme" type="text/css" href="/assets/colors/cyan.css" />
       </head>
       <body data-bs-theme="dark" suppressHydrationWarning={true}>
+        <VisitTracker />
         {children}
       </body>
     </html>

@@ -110,3 +110,37 @@ export async function checkRecentContactByIP(ipAddress: string): Promise<boolean
     return false;
   }
 }
+
+// Función para registrar una visita a la página
+export interface VisitData {
+  ipAddress?: string;
+  userAgent?: string;
+  pagePath?: string;
+  referrer?: string;
+  deviceType?: string;
+  browser?: string;
+  os?: string;
+}
+
+export async function insertVisit(data: VisitData): Promise<{ success: boolean; id?: number }> {
+  try {
+    const { rows } = await sql`
+      INSERT INTO visits (ip_address, user_agent, page_path, referrer, device_type, browser, os)
+      VALUES (
+        ${data.ipAddress || null}, 
+        ${data.userAgent || null}, 
+        ${data.pagePath || '/'}, 
+        ${data.referrer || null},
+        ${data.deviceType || null},
+        ${data.browser || null},
+        ${data.os || null}
+      )
+      RETURNING id
+    `;
+    return { success: true, id: rows[0].id };
+  } catch (error) {
+    console.error('Error inserting visit:', error);
+    // No lanzar error para no afectar la experiencia del usuario
+    return { success: false };
+  }
+}

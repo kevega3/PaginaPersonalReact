@@ -171,29 +171,7 @@ const Contact = () => {
                     </div>
                 )}
 
-                {/* Modal de límite alcanzado */}
-                {isRateLimited && (
-                    <div className="alert alert-warning alert-dismissible fade show" role="alert" style={{
-                        position: 'fixed',
-                        top: '20px',
-                        right: '20px',
-                        zIndex: 9999,
-                        minWidth: '300px',
-                        boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-                    }}>
-                        <h5 className="alert-heading">
-                            <i className="mdi mdi-clock-alert me-2"></i>
-                            Límite Alcanzado
-                        </h5>
-                        <p className="mb-0">Ya recibí tu mensaje. Te responderé pronto. Por favor espera 24 horas antes de enviar otro.</p>
-                        <button 
-                            type="button" 
-                            className="btn-close" 
-                            onClick={() => setIsRateLimited(false)}
-                            aria-label="Close"
-                        ></button>
-                    </div>
-                )}
+               
 
                 <div className="row">
                     <div className="col-lg-4">
@@ -205,21 +183,22 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-8">
                         <div className="custom-form mt-4 pt-4">
-                            {isRateLimited ? (
+                           {isRateLimited ? (
                                 <div className="text-center p-5" style={{
-                                    backgroundColor: '#f8f9fa',
+                                    backgroundColor: '#172330',
                                     borderRadius: '8px',
-                                    border: '2px solid #ffc107'
+                                    border: '2px solid #17233',
+                                    color: 'white'
                                 }}>
                                     <i className="mdi mdi-email-check" style={{ fontSize: '64px', color: '#ffc107' }}></i>
-                                    <h4 className="mt-3">Gracias por tu mensaje</h4>
-                                    <p className="text-muted mt-2">
+                                    <h4 className="mt-3" style={{ color: 'white' }}>Gracias por tu mensaje</h4>
+                                    <p className="mt-2" style={{ color: 'white' }}>
                                         Ya recibí tu consulta y te responderé lo antes posible.<br/>
                                         <strong>Por favor espera 24 horas antes de enviar otro mensaje.</strong>
                                     </p>
-                                    <small className="text-muted">Esta medida nos ayuda a prevenir spam y dar mejor atención a todos.</small>
+                                    <small style={{ color: '#ccc' }}>Esta medida nos ayuda a prevenir spam y dar mejor atención a todos.</small>
                                 </div>
-                            ) : (
+                            ) :(
                             <form onSubmit={handleSubmit} name="contact-form" id="contact-form" noValidate>
                                 <div className="row">
                                     <div className="col-lg-6">

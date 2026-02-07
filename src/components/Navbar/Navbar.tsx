@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { config } from '@/config';
 
 const NavItems = [
     { id: 1, idnm: "home", navheading: "Inicio" },
@@ -43,10 +42,6 @@ export default function Navbar({ navClass }: { navClass?: string }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const openResume = () => {
-        window.open(config.urlHojaVida, "_blank");
-    };
-
     return (
         <nav className={`navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark ${sticky ? "nav-sticky" : ""} ${navClass || ""}`} id="navbar">
             <div className="container">
@@ -74,7 +69,7 @@ export default function Navbar({ navClass }: { navClass?: string }) {
 
                 {/* Navbar Collapse */}
                 <div className={`collapse navbar-collapse ${isOpenMenu ? "show" : ""}`} id="navbarCollapse">
-                    <ul className="navbar-nav navbar-center" id="mySidenav">
+                    <ul className="navbar-nav mx-auto" id="mySidenav">
                         {NavItems.map((item, key) => (
                             <li key={key} className={`nav-item ${activeSection === item.idnm ? "active" : ""}`}>
                                 <a href={`#${item.idnm}`} className="nav-link">
@@ -83,20 +78,6 @@ export default function Navbar({ navClass }: { navClass?: string }) {
                             </li>
                         ))}
                     </ul>
-                    <div className="nav-button ms-auto">
-                        <ul className="navbar-right nav navbar-nav">
-                            <li className="nav-item">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary navbar-btn btn-rounded waves-effect waves-light"
-                                    style={{ color: "white" }}
-                                    onClick={openResume}
-                                >
-                                    Descargar CV
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </nav>

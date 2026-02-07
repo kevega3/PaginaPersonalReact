@@ -1,10 +1,14 @@
 'use client';
 
 import React from 'react';
-// import { Container, Row, Col } from 'reactstrap';
 import Image from 'next/image';
+import { config } from '@/config';
 
 export default function Section() {
+  const handleDownloadCV = () => {
+    window.open(config.urlHojaVida, "_blank");
+  };
+
   return (
     <section className="section bg-home home-half" id="home" style={{ position: 'relative' }}>
       <div className="bg-overlay"></div>
@@ -30,10 +34,18 @@ export default function Section() {
             </h1>
             
             <div className="mt-4 pt-2">
+              <button 
+                onClick={handleDownloadCV}
+                className="btn btn-primary btn-rounded me-3 mb-2"
+                
+              >
+                <i className="mdi mdi-download me-2"></i>
+                Descargar CV
+              </button>
               <a href="#testi" className="btn btn-primary btn-rounded me-3 mb-2">
                 Ver Proyectos <i className="mdi mdi-arrow-down ps-1"></i>
               </a>
-              <a href="#contact" className="btn btn-outline-white btn-rounded mb-2">
+              <a href="#contact" className="btn btn-light btn-rounded mb-2">
                 Contáctame
               </a>
             </div>

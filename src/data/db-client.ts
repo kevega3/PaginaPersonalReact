@@ -1,10 +1,8 @@
 import { sql } from '@vercel/postgres';
-import { unstable_noStore as noStore } from 'next/cache';
 import type { Service, Project, Certificate, PortfolioData } from '@/types';
 
 // Funciones de consulta
 export async function getServices(): Promise<Service[]> {
-  noStore(); // Evita caché estático si los datos cambian
   try {
     const { rows } = await sql<Service>`
       SELECT title, icon, description 
@@ -19,7 +17,6 @@ export async function getServices(): Promise<Service[]> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  noStore();
   try {
     // Aliases para mantener compatibilidad con tu frontend actual (cmpName, message)
     const { rows } = await sql<Project>`
@@ -40,7 +37,6 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getCertificates(): Promise<Certificate[]> {
-  noStore();
   try {
     const { rows } = await sql<Certificate>`SELECT * FROM certificates ORDER BY id ASC`;
     return rows;

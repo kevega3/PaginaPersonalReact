@@ -12,6 +12,9 @@ import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import { getPortfolioData } from "@/data/db-client";
 
+// Revalidar la página cada 1 hora (3600 segundos)
+export const revalidate = 3600;
+
 export default async function Home() {
   const data = await getPortfolioData();
 

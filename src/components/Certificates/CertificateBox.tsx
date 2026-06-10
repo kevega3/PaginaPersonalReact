@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
-interface Certificate {
-    id: number;
-    topic: string;
-    title: string;
-    description: string;
-    link: string;
-}
+import type { Certificate } from '@/types';
 
 interface CertificateBoxProps {
     certificate: Certificate;

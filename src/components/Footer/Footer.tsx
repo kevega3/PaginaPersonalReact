@@ -15,7 +15,7 @@ export default function Footer() {
                         <div className="text-muted mt-4">
                             <ul className="list-unstyled footer-list">
                                 <li><Link href="/">Inicio</Link></li>
-                                <li><Link href="#features">Resumen</Link></li>
+
                                 <li><Link href="#services">Habilidades</Link></li>
                                 <li><Link href="#about">Sobre Mí</Link></li>
                                 <li><Link href="#blog">Certificados</Link></li>

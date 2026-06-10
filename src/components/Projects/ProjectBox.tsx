@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
-interface Project {
-    id: number;
-    name: string;
-    cmpName: string;
-    message: string;
-    link?: string;
-}
+import type { Project } from '@/types';
 
 interface ProjectBoxProps {
     project: Project;

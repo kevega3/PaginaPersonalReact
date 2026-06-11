@@ -1046,7 +1046,7 @@ iframe {
 }
 
 .bg-home {
-  background: url("../images/bg-home.jpg");
+  /* Imagen de fondo manejada por next/image en Section.tsx */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1173,23 +1173,8 @@ iframe {
   animation-delay: 1s;
 }
 
-.wave-two {
-  background-image: url("../images/wave-shape/wave2.png");
-  background-size: 50% 120px;
-}
 
-.wave-anim .wave-two {
-  animation: move_wave 10s linear infinite;
-}
-
-.wave-three {
-  background-image: url("../images/wave-shape/wave3.png");
-  background-size: 50% 100px;
-}
-
-.wave-anim .wave-three {
-  animation: move_wave 15s linear infinite;
-}
+/* Wave animations eliminadas - no se usan en el sitio */
 
 @keyframes move_wave {
   0% {
@@ -1218,12 +1203,7 @@ iframe {
   fill: #18222e;
   stroke: #18222e;
 }
-[data-bs-theme=dark] .wave-two {
-  background-image: url("../images/wave-shape/wave-dark2.png");
-}
-[data-bs-theme=dark] .wave-three {
-  background-image: url("../images/wave-shape/wave-dark3.png");
-}
+/* Wave dark images eliminadas - no se usan en el sitio */
 
 /*-------Demo 3 Rgistartion form ------*/
 .home-registration {
@@ -1347,14 +1327,14 @@ iframe {
 }
 
 .bg-web-desc {
-  background: url("../images/img-1.jpg");
+  /* Imagen de fondo eliminada - usar overlay con color sólido */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .bg-get-start {
-  background: url("../images/img-2.jpg");
+  /* Imagen de fondo eliminada - usar overlay con color sólido */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

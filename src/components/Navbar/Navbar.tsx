@@ -20,6 +20,25 @@ export default function Navbar({ navClass }: { navClass?: string }) {
 
     const toggle = () => setIsOpenMenu(!isOpenMenu);
 
+    // Smooth scroll para los anchors del navbar (accesibilidad)
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
+        e.preventDefault();
+        const section = document.getElementById(idnm);
+        if (section) {
+            const offset = section.offsetTop - 70; // Compensar altura del navbar fijo
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth',
+            });
+            // Cerrar menú móvil si está abierto
+            if (isOpenMenu) {
+                setIsOpenMenu(false);
+            }
+            // Actualizar URL sin scroll
+            window.history.pushState(null, '', `#${idnm}`);
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
              if (window.scrollY >= 50) {
@@ -72,7 +91,12 @@ export default function Navbar({ navClass }: { navClass?: string }) {
                     <ul className="navbar-nav mx-auto" id="mySidenav">
                         {NavItems.map((item, key) => (
                             <li key={key} className={`nav-item ${activeSection === item.idnm ? "active" : ""}`}>
-                                <a href={`#${item.idnm}`} className="nav-link">
+                                <a 
+                                    href={`#${item.idnm}`} 
+                                    className="nav-link"
+                                    onClick={(e) => handleNavClick(e, item.idnm)}
+                                    aria-label={`Ir a la sección ${item.navheading}`}
+                                >
                                     {item.navheading}
                                 </a>
                             </li>

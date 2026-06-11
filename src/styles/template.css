@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Sarabun:wght@400;500;600;700&display=swap");
+/* Google Fonts eliminado: se usa next/font en layout.tsx */
 :root,
 [data-bs-theme=light] {
   --bs-box-bg: #ffffff;

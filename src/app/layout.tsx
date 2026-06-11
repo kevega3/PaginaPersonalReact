@@ -128,19 +128,43 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Cargamos los estilos legacy desde public/assets por ahora para mantener fidelidad visual */}
+        {/* 
+          Icon fonts: se mantienen como <link> porque referencian archivos 
+          de fuentes en public/assets/fonts/ con rutas relativas.
+          Bootstrap, template styles y color theme ahora se cargan via 
+          globals.css (pipeline de Next.js, optimizado y sin render-blocking).
+        */}
         <link rel="stylesheet" type="text/css" href="/assets/css/pe-icon-7-stroke.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css" />
-        {/* <link rel="stylesheet" type="text/css" href="/assets/css/waves.css" /> */}
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
-        {/* <link rel="stylesheet" type="text/css" href="/assets/css/magnific-popup.css" /> */}
-        <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-        {/* Tema por defecto */}
-        <link rel="stylesheet" id="colorTheme" type="text/css" href="/assets/colors/cyan.css" />
       </head>
       <body data-bs-theme="dark" suppressHydrationWarning={true}>
+        {/* Skip-to-content link para accesibilidad (navegación por teclado) */}
+        <a 
+          href="#main-content" 
+          className="visually-hidden-focusable skip-link"
+          style={{
+            position: 'absolute',
+            top: '-100%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 10000,
+            padding: '0.75rem 1.5rem',
+            backgroundColor: '#0dcaf0',
+            color: '#000',
+            borderRadius: '0 0 8px 8px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            transition: 'top 0.2s',
+          }}
+          onFocus={(e) => { e.currentTarget.style.top = '0'; }}
+          onBlur={(e) => { e.currentTarget.style.top = '-100%'; }}
+        >
+          Saltar al contenido principal
+        </a>
         <VisitTracker />
-        {children}
+        <div id="main-content">
+          {children}
+        </div>
       </body>
     </html>
   );

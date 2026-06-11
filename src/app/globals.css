@@ -1,4 +1,29 @@
 /* 
-  Aquí podemos poner estilos globales adicionales o sobreescribir los de bootstrap/theme.
-  Por ahora está vacío para respetar los estilos legacy.
+  ============================================================
+  CSS Pipeline de Next.js
+  Orden de carga: Bootstrap → Template → Theme → Custom
+  ============================================================
 */
+
+/* 1. Bootstrap 5.3 desde npm (optimizado por Next.js) */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* 2. Estilos del template (customizaciones sobre Bootstrap) */
+@import './template.css';
+
+/* 3. Tema de color activo (cyan por defecto) */
+@import './theme.css';
+
+/* ============================================================
+   Estilos globales adicionales
+   ============================================================ */
+
+/* Smooth scroll nativo para anchors (fallback para navegadores modernos) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skip-to-content link: visible solo cuando recibe focus por teclado */
+.skip-link:focus {
+  top: 0 !important;
+}

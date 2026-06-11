@@ -141,23 +141,7 @@ export default function RootLayout({
         {/* Skip-to-content link para accesibilidad (navegación por teclado) */}
         <a 
           href="#main-content" 
-          className="visually-hidden-focusable skip-link"
-          style={{
-            position: 'absolute',
-            top: '-100%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            zIndex: 10000,
-            padding: '0.75rem 1.5rem',
-            backgroundColor: '#0dcaf0',
-            color: '#000',
-            borderRadius: '0 0 8px 8px',
-            fontWeight: 600,
-            textDecoration: 'none',
-            transition: 'top 0.2s',
-          }}
-          onFocus={(e) => { e.currentTarget.style.top = '0'; }}
-          onBlur={(e) => { e.currentTarget.style.top = '-100%'; }}
+          className="skip-link"
         >
           Saltar al contenido principal
         </a>

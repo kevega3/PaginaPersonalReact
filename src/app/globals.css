@@ -9,10 +9,10 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 /* 2. Estilos del template (customizaciones sobre Bootstrap) */
-@import './template.css';
+@import '../styles/template.css';
 
 /* 3. Tema de color activo (cyan por defecto) */
-@import './theme.css';
+@import '../styles/theme.css';
 
 /* ============================================================
    Estilos globales adicionales

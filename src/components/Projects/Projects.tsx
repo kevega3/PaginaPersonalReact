@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import SectionTitle from "../common/SectionTitle";
 import ProjectBox from "./ProjectBox";
+import AnimatedGridItem from '../common/AnimatedGridItem';
 import { Project } from '@/types';
 
 interface ProjectsProps {
@@ -9,7 +12,7 @@ interface ProjectsProps {
 
 const Projects = ({ data }: ProjectsProps) => {
     return (
-        <section className="section-padding bg-dark-bg" id="testi">
+        <section className="section-padding bg-section" id="testi">
             <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Proyectos destacados" 
@@ -17,7 +20,9 @@ const Projects = ({ data }: ProjectsProps) => {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                     {data.map((project, key) => (
-                        <ProjectBox key={key} project={project} />
+                        <AnimatedGridItem key={key} index={key}>
+                            <ProjectBox project={project} />
+                        </AnimatedGridItem>
                     ))}
                 </div>
             </div>

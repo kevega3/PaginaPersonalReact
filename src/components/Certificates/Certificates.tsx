@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import SectionTitle from "../common/SectionTitle";
 import CertificateBox from "./CertificateBox";
+import AnimatedGridItem from '../common/AnimatedGridItem';
 import { Certificate } from '@/types';
 
 interface CertificatesProps {
@@ -9,7 +12,7 @@ interface CertificatesProps {
 
 const Certificates = ({ data }: CertificatesProps) => {
     return (
-        <section className="section-padding bg-dark-card" id="blog">
+        <section className="section-padding bg-section-alt" id="blog">
             <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Certificaciones" 
@@ -17,7 +20,9 @@ const Certificates = ({ data }: CertificatesProps) => {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                     {data.map((cert, key) => (
-                        <CertificateBox key={key} certificate={cert} />
+                        <AnimatedGridItem key={key} index={key}>
+                            <CertificateBox certificate={cert} />
+                        </AnimatedGridItem>
                     ))}
                 </div>
             </div>

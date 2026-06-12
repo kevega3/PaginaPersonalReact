@@ -17,20 +17,86 @@
   --color-border-light: #ecf0f5;
   --color-footer-text: #272a33;
   --color-footer-bg: #151f2b;
+  --color-footer-bg-light: #272a33;
   --font-heading: "Sarabun", sans-serif;
   --font-body: "Rubik", sans-serif;
 }
 
+:root {
+  --bg-body: #ffffff;
+  --bg-card: #ffffff;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-hard: #f5f7fa;
+  --text-body: #272a33;
+  --text-secondary: #858d96;
+  --border-color: #ecf0f5;
+  --footer-bg: #272a33;
+  --footer-text: #dce6f3;
+  --nav-bg: #ffffff;
+  --nav-text: rgba(39, 42, 51, 0.7);
+  --card-border: #ecf0f5;
+  --form-bg: rgba(255, 255, 255, 0.85);
+  --form-border: #ecf0f5;
+  --form-text: #4c5667;
+}
+
+.dark {
+  --bg-body: #141c26;
+  --bg-card: #1a2532;
+  --bg-surface: #151f2b;
+  --bg-hard: #172330;
+  --text-body: #f3f6f9;
+  --text-secondary: #98a0aa;
+  --border-color: #1a2532;
+  --footer-bg: #151f2b;
+  --footer-text: #98a0aa;
+  --nav-bg: #141c26;
+  --nav-text: rgba(255, 255, 255, 0.6);
+  --card-border: #1a2532;
+  --form-bg: #151f2b;
+  --form-border: #1a2532;
+  --form-text: #f3f6f9;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
   font-family: var(--font-body);
   font-size: 14.4px;
   line-height: 24px;
-  background-color: var(--color-dark-bg);
-  color: var(--color-body-text-light);
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-body {
+  background-color: var(--bg-body);
+}
+
+.text-body-text {
+  color: var(--text-body);
+}
+
+.text-body-text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-section {
+  background-color: var(--bg-body);
+}
+
+.bg-section-alt {
+  background-color: var(--bg-card);
+}
+
+.dark .bg-section {
+  background-color: var(--bg-body);
+}
+
+.dark .bg-section-alt {
+  background-color: var(--bg-card);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -155,16 +221,16 @@ a {
   padding: 10px 22px;
   font-size: 14px;
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--text-body);
+  border: 2px solid var(--text-body);
   border-radius: 30px;
   transition: all 0.5s;
   cursor: pointer;
 }
 
 .btn-outline-custom:hover {
-  background-color: #fff;
-  color: #272a33;
+  background-color: var(--text-body);
+  color: var(--bg-body);
   transform: translateY(-5px);
 }
 
@@ -172,6 +238,7 @@ a {
   padding: 20px 0;
   z-index: 999;
   transition: all 0.5s ease-in-out;
+  background-color: var(--nav-bg);
 }
 
 .navbar-custom.nav-sticky {
@@ -179,12 +246,8 @@ a {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar-custom.navbar-white {
-  background-color: var(--color-dark-bg);
-}
-
 .navbar-custom .nav-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--nav-text);
   font-size: 15px;
   text-transform: uppercase;
   padding: 15px 0;
@@ -223,9 +286,10 @@ a {
 
 .testimonial-decs {
   border-radius: 8px;
-  border: 1px solid var(--color-dark-card);
+  border: 1px solid var(--card-border);
   box-shadow: 0px 3px 6px 1px rgba(38, 107, 193, 0.08);
   transition: all 0.3s ease-in-out;
+  background-color: var(--bg-body);
 }
 
 .testimonial-decs:hover {
@@ -240,7 +304,7 @@ a {
 }
 
 .blog-title {
-  color: var(--color-body-text-light);
+  color: var(--text-body);
   transition: all 0.5s;
 }
 
@@ -261,11 +325,12 @@ a {
   height: 50px;
   padding-left: 20px;
   font-size: 14px;
-  background-color: var(--color-dark-surface);
-  border: 1px solid var(--color-dark-card);
-  color: var(--color-body-text-light);
+  background-color: var(--form-bg);
+  border: 1px solid var(--form-border);
+  color: var(--form-text);
   border-radius: 4px;
   width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .form-input:focus {
@@ -273,15 +338,20 @@ a {
   border-color: var(--color-primary);
 }
 
+.form-input::placeholder {
+  color: var(--text-secondary);
+}
+
 .form-textarea {
   padding: 12px 20px;
   font-size: 14px;
-  background-color: var(--color-dark-surface);
-  border: 1px solid var(--color-dark-card);
-  color: var(--color-body-text-light);
+  background-color: var(--form-bg);
+  border: 1px solid var(--form-border);
+  color: var(--form-text);
   border-radius: 4px;
   width: 100%;
   resize: vertical;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .form-textarea:focus {
@@ -289,9 +359,14 @@ a {
   border-color: var(--color-primary);
 }
 
+.form-textarea::placeholder {
+  color: var(--text-secondary);
+}
+
 .footer-section {
   padding: 50px 0;
-  background-color: var(--color-footer-bg);
+  background-color: var(--footer-bg);
+  transition: background-color 0.3s ease;
 }
 
 .footer-list {
@@ -304,7 +379,7 @@ a {
 }
 
 .footer-list li a {
-  color: var(--color-secondary-text-light);
+  color: var(--footer-text);
   transition: all 0.3s ease-in-out;
 }
 

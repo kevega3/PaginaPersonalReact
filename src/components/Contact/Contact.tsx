@@ -146,7 +146,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="section-padding" id="contact" aria-labelledby="contact-title">
+        <section className="section-padding bg-section" id="contact" aria-labelledby="contact-title">
             <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Contáctame" 
@@ -185,7 +185,7 @@ const Contact = () => {
                                 <br/>
                                 <a 
                                     href="tel:+573114444064" 
-                                    className="text-secondary-text-light block mt-2"
+                                    className="text-body-text-secondary block mt-2"
                                     aria-label="Llamar al celular +57 311 444 40 64"
                                 >
                                     +57 311 444 40 64
@@ -196,7 +196,7 @@ const Contact = () => {
                                 <br/>
                                 <a 
                                     href="mailto:kevinsvegaquiroga@gmail.com" 
-                                    className="text-secondary-text-light block mt-2"
+                                    className="text-body-text-secondary block mt-2"
                                     aria-label="Enviar email a kevinsvegaquiroga@gmail.com"
                                 >
                                     kevinsvegaquiroga@gmail.com
@@ -205,7 +205,7 @@ const Contact = () => {
                             <p className="mt-4">
                                 <span className="text-lg font-semibold">Horario de Trabajo:</span>
                                 <br/>
-                                <span className="text-secondary-text-light block mt-2">6:00AM a 6:00PM</span>
+                                <span className="text-body-text-secondary block mt-2">6:00AM a 6:00PM</span>
                             </p>
                         </div>
                     </div>
@@ -213,14 +213,14 @@ const Contact = () => {
                     <div className="lg:col-span-8">
                         <div className="mt-4 pt-4">
                            {isRateLimited ? (
-                                <div className="text-center p-8 bg-dark-hard rounded-lg border-2 border-dark-hard text-white" role="status">
+                                <div className="text-center p-8 rounded-lg border-2" style={{ backgroundColor: 'var(--bg-hard)', borderColor: 'var(--border-color)' }} role="status">
                                     <i className="mdi mdi-email-check text-6xl text-yellow-400" aria-hidden="true"></i>
-                                    <h4 className="mt-3 text-white">Gracias por tu mensaje</h4>
-                                    <p className="mt-2 text-white">
+                                    <h4 className="mt-3">Gracias por tu mensaje</h4>
+                                    <p className="mt-2">
                                         Ya recibí tu consulta y te responderé lo antes posible.<br/>
                                         <strong>Por favor espera 24 horas antes de enviar otro mensaje.</strong>
                                     </p>
-                                    <small className="text-gray-400">Esta medida nos ayuda a prevenir spam y dar mejor atención a todos.</small>
+                                    <small className="text-body-text-secondary">Esta medida nos ayuda a prevenir spam y dar mejor atención a todos.</small>
                                 </div>
                             ) :(
                             <form 

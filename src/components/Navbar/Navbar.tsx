@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const NavItems = [
     { id: 1, idnm: "home", navheading: "Inicio" },
@@ -16,46 +17,68 @@ export default function Navbar({ navClass }: { navClass?: string }) {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [sticky, setSticky] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
+    const [isScrolling, setIsScrolling] = useState(false);
 
     const toggle = () => setIsOpenMenu(!isOpenMenu);
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
+    const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
         e.preventDefault();
+        
+        if (isScrolling) return;
+        
         const section = document.getElementById(idnm);
         if (section) {
+            setIsScrolling(true);
+            
             const offset = section.offsetTop - 70;
             window.scrollTo({
                 top: offset,
                 behavior: 'smooth',
             });
+            
             if (isOpenMenu) {
                 setIsOpenMenu(false);
             }
+            
             window.history.pushState(null, '', `#${idnm}`);
+            
+            setTimeout(() => {
+                setIsScrolling(false);
+            }, 800);
         }
-    };
+    }, [isScrolling, isOpenMenu]);
 
     useEffect(() => {
+        let scrollTimeout: NodeJS.Timeout;
+        
         const handleScroll = () => {
-             if (window.scrollY >= 50) {
+            if (window.scrollY >= 50) {
                 setSticky(true);
-             } else {
+            } else {
                 setSticky(false);
-             }
+            }
 
-             const scrollPosition = window.scrollY + 100;
-             
-             for (const item of NavItems) {
-                 const section = document.getElementById(item.idnm);
-                 if (section && section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
-                     setActiveSection(item.idnm);
-                 }
-             }
+            if (!isScrolling) {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const scrollPosition = window.scrollY + 100;
+                    
+                    for (const item of NavItems) {
+                        const section = document.getElementById(item.idnm);
+                        if (section && section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
+                            setActiveSection(item.idnm);
+                        }
+                    }
+                }, 100);
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            clearTimeout(scrollTimeout);
+        };
+    }, [isScrolling]);
 
     return (
         <nav className={`navbar-custom fixed top-0 left-0 right-0 w-full ${sticky ? "nav-sticky" : ""} ${navClass || ""}`} id="navbar">
@@ -72,14 +95,17 @@ export default function Navbar({ navClass }: { navClass?: string }) {
                         />
                     </a>
 
-                    <button 
-                        className="lg:hidden text-white text-2xl"
-                        type="button" 
-                        onClick={toggle}
-                        aria-label="Toggle navigation"
-                    >
-                        <i className="mdi mdi-menu"></i>
-                    </button>
+                    <div className="flex items-center gap-4">
+                        <ThemeToggle />
+                        <button 
+                            className="lg:hidden text-2xl"
+                            type="button" 
+                            onClick={toggle}
+                            aria-label="Toggle navigation"
+                        >
+                            <i className="mdi mdi-menu"></i>
+                        </button>
+                    </div>
 
                     <div className={`${isOpenMenu ? "block" : "hidden"} lg:block lg:flex lg:items-center lg:mx-auto`}>
                         <ul className="flex flex-col lg:flex-row list-none" id="mySidenav">

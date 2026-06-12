@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutUs = () => {
   return (
-    <section className="section-padding" id="about">
+    <section className="section-padding bg-section" id="about">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="font-light">Sobre mí</h2>
@@ -14,10 +14,10 @@ const AboutUs = () => {
             <div>
               <h3 className="mb-3">Kevin's Vega Quiroga</h3>
               <h5 className="text-primary mb-4">Ingeniero de Software | Full Stack Developer</h5>
-              <p className="text-secondary-text-light">
+              <p className="text-body-text-secondary">
                 Hola, soy <b>Kevin's Vega Quiroga</b>, <b>Ingeniero de Software</b> con más de <b>4 años de experiencia</b>, enfocado en la transformación digital del <b>sector salud (HealthTech)</b>. Poseo una sólida experiencia diseñando soluciones de <b>interoperabilidad clínica</b>, orquestando integraciones complejas bajo estándares como <b>HL7 FHIR</b> y arquitecturas distribuidas.
               </p>
-              <p className="text-secondary-text-light mt-4">
+              <p className="text-body-text-secondary mt-4">
                 Como apasionado por la <b>Innovación Tecnológica</b>, no solo construyo software, sino ecosistemas escalables de alta disponibilidad. Mi objetivo es resolver desafíos críticos de negocio mediante tecnología robusta, asegurando que la información vital fluya de manera segura y eficiente entre instituciones.
               </p>
             </div>

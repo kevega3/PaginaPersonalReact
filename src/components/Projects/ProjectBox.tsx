@@ -17,11 +17,11 @@ const ProjectBox = ({ project }: ProjectBoxProps) => {
           <div className="p-1">
             <h5 className="text-center uppercase mb-3">
               {project.name} -{" "}
-              <span className="text-secondary-text-light capitalize">
+              <span className="text-body-text-secondary capitalize">
                 {project.cmpName}
               </span>
             </h5>
-            <p className="text-secondary-text-light text-justify mb-0">
+            <p className="text-body-text-secondary text-justify mb-0">
               {project.message}
             </p>
             {project.link && (

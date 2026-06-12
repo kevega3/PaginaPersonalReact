@@ -14,7 +14,7 @@ export default function ServiceBox({ title, icon, description }: Props) {
           <i className={`${icon} text-primary`}></i>
           <div className="ml-4">
             <h4>{title}</h4>
-            <p className="pt-2 text-secondary-text-light">{description}</p>
+            <p className="pt-2 text-body-text-secondary">{description}</p>
           </div>
         </div>
       </div>

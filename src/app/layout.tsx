@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sarabun, Rubik } from "next/font/google";
 import "./globals.css"; 
 import VisitTracker from "@/components/VisitTracker/VisitTracker";
+import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";
 
 // Configuramos las fuentes
 const sarabun = Sarabun({
@@ -94,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${sarabun.variable} ${rubik.variable}`}>
+    <html lang="es" className={`${sarabun.variable} ${rubik.variable}`} suppressHydrationWarning>
       <head>
         {/* JSON-LD Structured Data para SEO */}
         <script
@@ -137,18 +138,19 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/assets/css/pe-icon-7-stroke.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css" />
       </head>
-      <body className="dark bg-dark-bg text-body-text-light" suppressHydrationWarning={true}>
-        {/* Skip-to-content link para accesibilidad (navegación por teclado) */}
-        <a 
-          href="#main-content" 
-          className="skip-link"
-        >
-          Saltar al contenido principal
-        </a>
-        <VisitTracker />
-        <div id="main-content">
-          {children}
-        </div>
+      <body className="bg-body text-body-text" suppressHydrationWarning={true}>
+        <ThemeProvider>
+          <a 
+            href="#main-content" 
+            className="skip-link"
+          >
+            Saltar al contenido principal
+          </a>
+          <VisitTracker />
+          <div id="main-content">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

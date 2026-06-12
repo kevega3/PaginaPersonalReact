@@ -1,17 +1,7 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Section from "@/components/Section/Section";
-import Services from "@/components/Services/Services";
-import WebsiteDescription from "@/components/WebsiteDescription/WebsiteDescription";
-import AboutUs from "@/components/AboutUs/AboutUs";
-import GetStarted from "@/components/GetStarted/GetStarted";
-import Projects from "@/components/Projects/Projects";
-import Certificates from "@/components/Certificates/Certificates";
-import Contact from "@/components/Contact/Contact";
-import Footer from "@/components/Footer/Footer";
+import PageContent from "@/components/PageContent/PageContent";
 import { getPortfolioData } from "@/data/db-client";
 import type { PortfolioData } from "@/types";
 
-// Revalidar la página cada 1 hora (3600 segundos)
 export const revalidate = 3600;
 
 export default async function Home() {
@@ -22,29 +12,9 @@ export default async function Home() {
     data = await getPortfolioData();
   } catch (error) {
     console.error('Error al cargar datos del portafolio:', error);
-    // Fallback: página sigue renderizando con secciones estáticas
     data = { services: [], projects: [], certificates: [] };
     hasError = true;
   }
 
-  return (
-    <main>
-      {hasError && (
-        <div className="bg-yellow-500/20 text-yellow-200 text-center py-2 px-4" role="alert">
-          <i className="mdi mdi-alert mr-2"></i>
-          Algunos contenidos no pudieron cargarse. Por favor intenta nuevamente más tarde.
-        </div>
-      )}
-      <Navbar navClass="navbar-white" />
-      <Section />
-      <AboutUs />
-      <WebsiteDescription />
-      <Services data={data.services} />
-      <GetStarted />
-      <Projects data={data.projects} />
-      <Certificates data={data.certificates} />
-      <Contact />
-      <Footer />
-    </main>
-  );
+  return <PageContent data={data} hasError={hasError} />;
 }

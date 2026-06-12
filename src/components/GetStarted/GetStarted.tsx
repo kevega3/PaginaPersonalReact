@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const GetStarted = () => {
     return (
-        <section className="section-padding-lg relative bg-dark-hard">
+        <section className="section-padding-lg relative" style={{ backgroundColor: 'var(--bg-hard)' }}>
             <div className="bg-overlay"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-2xl mx-auto text-center">

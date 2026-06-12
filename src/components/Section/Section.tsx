@@ -13,11 +13,7 @@ export default function Section() {
     e.preventDefault();
     const section = document.getElementById(targetId);
     if (section) {
-      const offset = section.offsetTop - 70;
-      window.scrollTo({
-        top: offset,
-        behavior: 'smooth',
-      });
+      section.scrollIntoView({ behavior: 'smooth' });
       window.history.pushState(null, '', `#${targetId}`);
     }
   };
@@ -53,9 +49,9 @@ export default function Section() {
               Descargar CV
             </button>
             <a 
-              href="#testi" 
+              href="#projects" 
               className="btn-primary-custom"
-              onClick={(e) => handleSmoothScroll(e, 'testi')}
+              onClick={(e) => handleSmoothScroll(e, 'projects')}
               aria-label="Ir a la sección de proyectos"
             >
               Ver Proyectos <i className="mdi mdi-arrow-down ml-1" aria-hidden="true"></i>

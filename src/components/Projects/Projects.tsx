@@ -12,7 +12,7 @@ interface ProjectsProps {
 
 const Projects = ({ data }: ProjectsProps) => {
     return (
-        <section className="section-padding bg-section" id="testi">
+        <section className="section-padding bg-section" id="projects">
             <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Proyectos destacados" 

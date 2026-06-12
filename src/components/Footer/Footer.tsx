@@ -15,9 +15,9 @@ export default function Footer() {
                         <div className="mt-4">
                             <ul className="footer-list">
                                 <li><Link href="/">Inicio</Link></li>
-                                <li><Link href="#services">Habilidades</Link></li>
+                                <li><Link href="#skills">Habilidades</Link></li>
                                 <li><Link href="#about">Sobre Mí</Link></li>
-                                <li><Link href="#blog">Certificados</Link></li>
+                                <li><Link href="#certificates">Certificados</Link></li>
                             </ul>
                         </div>
                     </div>

@@ -1,56 +1,42 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const NavItems = [
     { id: 1, idnm: "home", navheading: "Inicio" },
-    { id: 4, idnm: "about", navheading: "Sobre mí" },
-    { id: 3, idnm: "services", navheading: "Habilidades" },
-    { id: 5, idnm: "testi", navheading: "Proyectos" },
-    { id: 6, idnm: "blog", navheading: "Certificados" },
-    { id: 7, idnm: "contact", navheading: "Contacto" },
+    { id: 2, idnm: "about", navheading: "Sobre mí" },
+    { id: 3, idnm: "skills", navheading: "Habilidades" },
+    { id: 4, idnm: "projects", navheading: "Proyectos" },
+    { id: 5, idnm: "certificates", navheading: "Certificados" },
+    { id: 6, idnm: "contact", navheading: "Contacto" },
 ];
 
 export default function Navbar({ navClass }: { navClass?: string }) {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [sticky, setSticky] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
-    const [isScrolling, setIsScrolling] = useState(false);
 
     const toggle = () => setIsOpenMenu(!isOpenMenu);
 
-    const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
         e.preventDefault();
-        
-        if (isScrolling) return;
         
         const section = document.getElementById(idnm);
         if (section) {
-            setIsScrolling(true);
-            
-            const offset = section.offsetTop - 70;
-            window.scrollTo({
-                top: offset,
-                behavior: 'smooth',
-            });
+            section.scrollIntoView({ behavior: 'smooth' });
             
             if (isOpenMenu) {
                 setIsOpenMenu(false);
             }
             
             window.history.pushState(null, '', `#${idnm}`);
-            
-            setTimeout(() => {
-                setIsScrolling(false);
-            }, 800);
+            setActiveSection(idnm);
         }
-    }, [isScrolling, isOpenMenu]);
+    };
 
     useEffect(() => {
-        let scrollTimeout: NodeJS.Timeout;
-        
         const handleScroll = () => {
             if (window.scrollY >= 50) {
                 setSticky(true);
@@ -58,27 +44,24 @@ export default function Navbar({ navClass }: { navClass?: string }) {
                 setSticky(false);
             }
 
-            if (!isScrolling) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    const scrollPosition = window.scrollY + 100;
-                    
-                    for (const item of NavItems) {
-                        const section = document.getElementById(item.idnm);
-                        if (section && section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
-                            setActiveSection(item.idnm);
-                        }
+            for (const item of NavItems) {
+                const section = document.getElementById(item.idnm);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 120 && rect.bottom > 120) {
+                        setActiveSection(item.idnm);
+                        break;
                     }
-                }, 100);
+                }
             }
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
+        
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            clearTimeout(scrollTimeout);
         };
-    }, [isScrolling]);
+    }, []);
 
     return (
         <nav className={`navbar-custom fixed top-0 left-0 right-0 w-full ${sticky ? "nav-sticky" : ""} ${navClass || ""}`} id="navbar">

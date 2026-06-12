@@ -12,7 +12,7 @@ interface ServicesProps {
 
 export default function Services({ data }: ServicesProps) {
   return (
-    <section className="section-padding bg-section-alt" id="services">
+    <section className="section-padding bg-section-alt" id="skills">
       <div className="container mx-auto px-4">
         <SectionTitle
             title="Habilidades"

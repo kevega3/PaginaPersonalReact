@@ -12,7 +12,7 @@ interface CertificatesProps {
 
 const Certificates = ({ data }: CertificatesProps) => {
     return (
-        <section className="section-padding bg-section-alt" id="blog">
+        <section className="section-padding bg-section-alt" id="certificates">
             <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Certificaciones" 

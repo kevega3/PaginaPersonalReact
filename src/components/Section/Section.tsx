@@ -9,7 +9,6 @@ export default function Section() {
     window.open(config.urlHojaVida, "_blank", "noopener,noreferrer");
   };
 
-  // Smooth scroll para anchors internos
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const section = document.getElementById(targetId);
@@ -24,10 +23,9 @@ export default function Section() {
   };
 
   return (
-    <section className="section bg-home home-half" id="home" style={{ position: 'relative' }} aria-label="Inicio">
+    <section className="section-padding home-half relative" id="home" aria-label="Inicio">
       <div className="bg-overlay" aria-hidden="true"></div>
-       {/* Imagen de fondo optimizada con Next.js */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+      <div className="absolute inset-0 -z-10">
         <Image 
             src="/assets/images/bg-home.jpg" 
             alt="" 
@@ -38,43 +36,38 @@ export default function Section() {
         />
       </div>
 
-      <div className="container">
-        <div className="row">
-          <div
-            className="col-lg-8 offset-lg-2 text-white text-center"
-          >
-            <h4 className="home-small-title">Kevin's Vega Quiroga</h4>
-            <h1 className="home-title">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-white text-center">
+          <h4 className="home-small-title">Kevin's Vega Quiroga</h4>
+          <h1 className="home-title">
             Ingeniero Desarrollador de Software
-            </h1>
-            
-            <div className="mt-4 pt-2">
-              <button 
-                onClick={handleDownloadCV}
-                className="btn btn-primary btn-rounded me-3 mb-2"
-                aria-label="Descargar hoja de vida en PDF"
-              >
-                <i className="mdi mdi-download me-2" aria-hidden="true"></i>
-                Descargar CV
-              </button>
-              <a 
-                href="#testi" 
-                className="btn btn-primary btn-rounded me-3 mb-2"
-                onClick={(e) => handleSmoothScroll(e, 'testi')}
-                aria-label="Ir a la sección de proyectos"
-              >
-                Ver Proyectos <i className="mdi mdi-arrow-down ps-1" aria-hidden="true"></i>
-              </a>
-              <a 
-                href="#contact" 
-                className="btn btn-light btn-rounded mb-2"
-                onClick={(e) => handleSmoothScroll(e, 'contact')}
-                aria-label="Ir a la sección de contacto"
-              >
-                Contáctame
-              </a>
-            </div>
+          </h1>
           
+          <div className="mt-4 pt-2 flex flex-wrap justify-center gap-3">
+            <button 
+              onClick={handleDownloadCV}
+              className="btn-primary-custom"
+              aria-label="Descargar hoja de vida en PDF"
+            >
+              <i className="mdi mdi-download mr-2" aria-hidden="true"></i>
+              Descargar CV
+            </button>
+            <a 
+              href="#testi" 
+              className="btn-primary-custom"
+              onClick={(e) => handleSmoothScroll(e, 'testi')}
+              aria-label="Ir a la sección de proyectos"
+            >
+              Ver Proyectos <i className="mdi mdi-arrow-down ml-1" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="#contact" 
+              className="btn-light-custom"
+              onClick={(e) => handleSmoothScroll(e, 'contact')}
+              aria-label="Ir a la sección de contacto"
+            >
+              Contáctame
+            </a>
           </div>
         </div>
       </div>

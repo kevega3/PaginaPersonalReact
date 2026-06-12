@@ -11,13 +11,13 @@ interface ServicesProps {
 
 export default function Services({ data }: ServicesProps) {
   return (
-    <section className="section bg-light" id="services">
-      <div className="container">
+    <section className="section-padding bg-dark-card" id="services">
+      <div className="container mx-auto px-4">
         <SectionTitle
             title="Habilidades"
             description="Aquí encontrarás un listado de mis habilidades técnicas, herramientas y tecnologías que domino para el desarrollo de soluciones de software eficientes y escalables."
         />
-        <div className="row mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {data.map((service, key) => (
                 <ServiceBox
                     key={key}

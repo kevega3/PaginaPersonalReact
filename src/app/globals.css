@@ -1,29 +1,59 @@
-/* 
-  ============================================================
-  CSS Pipeline de Next.js
-  Orden de carga: Bootstrap → Template → Theme → Custom
-  ============================================================
-*/
+@import "tailwindcss";
 
-/* 1. Bootstrap 5.3 desde npm (optimizado por Next.js) */
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* 2. Estilos del template (customizaciones sobre Bootstrap) */
-@import '../styles/template.css';
+@theme {
+  --color-primary: #1bbc9d;
+  --color-primary-hover: #159078;
+  --color-dark-bg: #141c26;
+  --color-dark-card: #1a2532;
+  --color-dark-surface: #151f2b;
+  --color-dark-hard: #172330;
+  --color-body-text: #272a33;
+  --color-body-text-light: #f3f6f9;
+  --color-secondary-text: #858d96;
+  --color-secondary-text-light: #98a0aa;
+  --color-light-bg: #fafbfe;
+  --color-border-light: #ecf0f5;
+  --color-footer-text: #272a33;
+  --color-footer-bg: #151f2b;
+  --font-heading: "Sarabun", sans-serif;
+  --font-body: "Rubik", sans-serif;
+}
 
-/* 3. Tema de color activo (cyan por defecto) */
-@import '../styles/theme.css';
-
-/* ============================================================
-   Estilos globales adicionales
-   ============================================================ */
-
-/* Smooth scroll nativo para anchors (fallback para navegadores modernos) */
 html {
   scroll-behavior: smooth;
 }
 
-/* Skip-to-content link: visible solo cuando recibe focus por teclado */
+body {
+  font-family: var(--font-body);
+  font-size: 14.4px;
+  line-height: 24px;
+  background-color: var(--color-dark-bg);
+  color: var(--color-body-text-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+::selection {
+  background-color: #272a33;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
 .skip-link {
   position: absolute;
   top: -100%;
@@ -41,4 +71,278 @@ html {
 
 .skip-link:focus {
   top: 0;
+}
+
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.section-padding-lg {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0d5849, #000508);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-title-border {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin: 0.75rem auto 0;
+}
+
+.section-subtitle {
+  letter-spacing: 0.02em;
+}
+
+.btn-primary-custom {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.btn-light-custom {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #272a33;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn-light-custom:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px);
+}
+
+.btn-outline-custom {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn-outline-custom:hover {
+  background-color: #fff;
+  color: #272a33;
+  transform: translateY(-5px);
+}
+
+.navbar-custom {
+  padding: 20px 0;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-custom.nav-sticky {
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-custom.navbar-white {
+  background-color: var(--color-dark-bg);
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 15px 0;
+  margin: 0 10px;
+  transition: all 0.5s;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-item-active .nav-link {
+  color: var(--color-primary);
+}
+
+.home-half {
+  padding-top: 220px;
+  padding-bottom: 150px;
+}
+
+.home-small-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.home-title {
+  font-size: 46px;
+  line-height: 64px;
+}
+
+.services-box {
+  padding: 15px 20px;
+}
+
+.services-box i {
+  font-size: 32px;
+}
+
+.testimonial-decs {
+  border-radius: 8px;
+  border: 1px solid var(--color-dark-card);
+  box-shadow: 0px 3px 6px 1px rgba(38, 107, 193, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-decs:hover {
+  transform: translateY(-1rem);
+}
+
+.testi-icon {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  opacity: 0.1;
+}
+
+.blog-title {
+  color: var(--color-body-text-light);
+  transition: all 0.5s;
+}
+
+.blog-title:hover {
+  color: var(--color-primary);
+}
+
+.read-btn {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.read-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+.form-input {
+  height: 50px;
+  padding-left: 20px;
+  font-size: 14px;
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-dark-card);
+  color: var(--color-body-text-light);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-textarea {
+  padding: 12px 20px;
+  font-size: 14px;
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-dark-card);
+  color: var(--color-body-text-light);
+  border-radius: 4px;
+  width: 100%;
+  resize: vertical;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.footer-section {
+  padding: 50px 0;
+  background-color: var(--color-footer-bg);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list li a {
+  color: var(--color-secondary-text-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-list li a:hover {
+  color: #dce6f3;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.get-started-title {
+  font-size: 2rem;
+}
+
+.hover-lift {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-1rem);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
 }

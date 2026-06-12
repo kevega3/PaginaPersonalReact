@@ -9,13 +9,13 @@ interface ProjectsProps {
 
 const Projects = ({ data }: ProjectsProps) => {
     return (
-        <section className="section bg-light" id="testi">
-            <div className="container">
+        <section className="section-padding bg-dark-bg" id="testi">
+            <div className="container mx-auto px-4">
                 <SectionTitle 
                     title="Proyectos destacados" 
                     description="Estos son algunos de los proyectos en los que he trabajado, abarcando desde desarrollos personales hasta soluciones empresariales." 
                 />
-                <div className="row mt-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                     {data.map((project, key) => (
                         <ProjectBox key={key} project={project} />
                     ))}

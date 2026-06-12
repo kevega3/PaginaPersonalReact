@@ -137,7 +137,7 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/assets/css/pe-icon-7-stroke.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css" />
       </head>
-      <body data-bs-theme="dark" suppressHydrationWarning={true}>
+      <body className="dark bg-dark-bg text-body-text-light" suppressHydrationWarning={true}>
         {/* Skip-to-content link para accesibilidad (navegación por teclado) */}
         <a 
           href="#main-content" 

@@ -10,34 +10,17 @@ export default function GlobalError({
   return (
     <html lang="es">
       <body>
-        <div
-          style={{
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#172330',
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-          }}
-        >
-          <div style={{ textAlign: 'center', padding: '2rem' }}>
-            <h1 style={{ color: '#fff', fontSize: '2rem', marginBottom: '1rem' }}>
+        <div className="min-h-screen flex items-center justify-center bg-dark-hard font-sans">
+          <div className="text-center p-8">
+            <h1 className="text-white text-3xl mb-4">
               Error inesperado
             </h1>
-            <p style={{ color: '#adb5bd', marginBottom: '2rem' }}>
+            <p className="text-gray-400 mb-8">
               Ocurrió un error crítico. Por favor recarga la página.
             </p>
             <button
               onClick={reset}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#0dcaf0',
-                color: '#000',
-                border: 'none',
-                borderRadius: '50px',
-                cursor: 'pointer',
-                fontSize: '1rem',
-              }}
+              className="px-6 py-3 bg-cyan-400 text-black border-none rounded-full cursor-pointer text-base hover:bg-cyan-300 transition-colors"
             >
               Recargar página
             </button>

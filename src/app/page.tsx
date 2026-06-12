@@ -30,8 +30,8 @@ export default async function Home() {
   return (
     <main>
       {hasError && (
-        <div className="alert alert-warning text-center mb-0 rounded-0" role="alert">
-          <i className="mdi mdi-alert me-2"></i>
+        <div className="bg-yellow-500/20 text-yellow-200 text-center py-2 px-4" role="alert">
+          <i className="mdi mdi-alert mr-2"></i>
           Algunos contenidos no pudieron cargarse. Por favor intenta nuevamente más tarde.
         </div>
       )}

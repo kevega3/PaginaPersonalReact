@@ -7,7 +7,6 @@ const NavItems = [
     { id: 1, idnm: "home", navheading: "Inicio" },
     { id: 4, idnm: "about", navheading: "Sobre mí" },
     { id: 3, idnm: "services", navheading: "Habilidades" },
-    
     { id: 5, idnm: "testi", navheading: "Proyectos" },
     { id: 6, idnm: "blog", navheading: "Certificados" },
     { id: 7, idnm: "contact", navheading: "Contacto" },
@@ -20,21 +19,18 @@ export default function Navbar({ navClass }: { navClass?: string }) {
 
     const toggle = () => setIsOpenMenu(!isOpenMenu);
 
-    // Smooth scroll para los anchors del navbar (accesibilidad)
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, idnm: string) => {
         e.preventDefault();
         const section = document.getElementById(idnm);
         if (section) {
-            const offset = section.offsetTop - 70; // Compensar altura del navbar fijo
+            const offset = section.offsetTop - 70;
             window.scrollTo({
                 top: offset,
                 behavior: 'smooth',
             });
-            // Cerrar menú móvil si está abierto
             if (isOpenMenu) {
                 setIsOpenMenu(false);
             }
-            // Actualizar URL sin scroll
             window.history.pushState(null, '', `#${idnm}`);
         }
     };
@@ -62,46 +58,45 @@ export default function Navbar({ navClass }: { navClass?: string }) {
     }, []);
 
     return (
-        <nav className={`navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark ${sticky ? "nav-sticky" : ""} ${navClass || ""}`} id="navbar">
-            <div className="container">
-                {/* Navbar Brand */}
-                <a className="navbar-brand logo text-uppercase" href="/">
-                    <Image 
-                        src="/assets/images/NuevoLogo.png" 
-                        alt="Logo" 
-                        width={50} 
-                        height={50} 
-                        style={{objectFit: "contain"}} 
-                        priority 
-                    />
-                </a>
+        <nav className={`navbar-custom fixed top-0 left-0 right-0 w-full ${sticky ? "nav-sticky" : ""} ${navClass || ""}`} id="navbar">
+            <div className="container mx-auto px-4">
+                <div className="flex items-center justify-between">
+                    <a className="logo uppercase flex items-center" href="/">
+                        <Image 
+                            src="/assets/images/NuevoLogo.png" 
+                            alt="Logo" 
+                            width={50} 
+                            height={50} 
+                            style={{objectFit: "contain"}} 
+                            priority 
+                        />
+                    </a>
 
-                {/* Navbar Toggler */}
-                <button 
-                    className="navbar-toggler" 
-                    type="button" 
-                    onClick={toggle}
-                    aria-label="Toggle navigation"
-                >
-                    <i className="mdi mdi-menu"></i>
-                </button>
+                    <button 
+                        className="lg:hidden text-white text-2xl"
+                        type="button" 
+                        onClick={toggle}
+                        aria-label="Toggle navigation"
+                    >
+                        <i className="mdi mdi-menu"></i>
+                    </button>
 
-                {/* Navbar Collapse */}
-                <div className={`collapse navbar-collapse ${isOpenMenu ? "show" : ""}`} id="navbarCollapse">
-                    <ul className="navbar-nav mx-auto" id="mySidenav">
-                        {NavItems.map((item, key) => (
-                            <li key={key} className={`nav-item ${activeSection === item.idnm ? "active" : ""}`}>
-                                <a 
-                                    href={`#${item.idnm}`} 
-                                    className="nav-link"
-                                    onClick={(e) => handleNavClick(e, item.idnm)}
-                                    aria-label={`Ir a la sección ${item.navheading}`}
-                                >
-                                    {item.navheading}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    <div className={`${isOpenMenu ? "block" : "hidden"} lg:block lg:flex lg:items-center lg:mx-auto`}>
+                        <ul className="flex flex-col lg:flex-row list-none" id="mySidenav">
+                            {NavItems.map((item, key) => (
+                                <li key={key} className={`nav-item ${activeSection === item.idnm ? "nav-item-active" : ""}`}>
+                                    <a 
+                                        href={`#${item.idnm}`} 
+                                        className="nav-link block"
+                                        onClick={(e) => handleNavClick(e, item.idnm)}
+                                        aria-label={`Ir a la sección ${item.navheading}`}
+                                    >
+                                        {item.navheading}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

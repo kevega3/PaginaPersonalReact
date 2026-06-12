@@ -1,11 +1,11 @@
 export default function Loading() {
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#172330' }}>
+    <div className="min-h-screen flex items-center justify-center bg-dark-hard">
       <div className="text-center">
-        <div className="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
-          <span className="visually-hidden">Cargando...</span>
+        <div className="w-12 h-12 border-4 border-primary border-r-transparent rounded-full animate-spin mx-auto" role="status">
+          <span className="sr-only">Cargando...</span>
         </div>
-        <p className="text-muted mt-3">Cargando contenido...</p>
+        <p className="text-secondary-text-light mt-3">Cargando contenido...</p>
       </div>
     </div>
   );

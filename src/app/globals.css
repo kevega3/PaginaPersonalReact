@@ -13,9 +13,9 @@
   --color-body-text-light: #f3f6f9;
   --color-secondary-text: #858d96;
   --color-secondary-text-light: #98a0aa;
-  --color-light-bg: #fafbfe;
-  --color-border-light: #ecf0f5;
-  --color-footer-text: #272a33;
+  --color-light-bg: #f4effa;
+  --color-border-light: #e7dff2;
+  --color-footer-text: #f7f3fb;
   --color-footer-bg: #151f2b;
   --color-footer-bg-light: #272a33;
   --font-heading: "Sarabun", sans-serif;
@@ -23,21 +23,21 @@
 }
 
 :root {
-  --bg-body: #ffffff;
-  --bg-card: #ffffff;
-  --bg-surface: rgba(255, 255, 255, 0.85);
-  --bg-hard: #f5f7fa;
-  --text-body: #272a33;
-  --text-secondary: #858d96;
-  --border-color: #ecf0f5;
-  --footer-bg: #272a33;
-  --footer-text: #dce6f3;
-  --nav-bg: #ffffff;
-  --nav-text: rgba(39, 42, 51, 0.7);
-  --card-border: #ecf0f5;
-  --form-bg: rgba(255, 255, 255, 0.85);
-  --form-border: #ecf0f5;
-  --form-text: #4c5667;
+  --bg-body: #f6f1f8;
+  --bg-card: #fffafc;
+  --bg-surface: rgba(255, 250, 252, 0.88);
+  --bg-hard: #efe6f3;
+  --text-body: #2d2433;
+  --text-secondary: #6e627a;
+  --border-color: #eadff0;
+  --footer-bg: #2d2433;
+  --footer-text: #efe6f3;
+  --nav-bg: #faf6fc;
+  --nav-text: rgba(45, 36, 51, 0.78);
+  --card-border: #eadff0;
+  --form-bg: #fffafd;
+  --form-border: #e3d8ea;
+  --form-text: #2d2433;
 }
 
 .dark {
